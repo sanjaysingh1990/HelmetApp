@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CameraActivity"
+    android:background="#000"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/logo"
+            android:layout_marginLeft="-30dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="PLACE HELMET"
+            android:layout_alignParentRight="true"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:gravity="center"
+            />
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_weight="1"
+        />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        >
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/ic_launcher"
+            android:id="@+id/galleryimage"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GALLERY"
+            android:textColor="#fff"
+            android:layout_below="@+id/galleryimage"
+            />
+
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/share1"
+            android:layout_alignParentRight="true"
+
+           android:id="@+id/share"
+            android:layout_marginTop="15dp"
+            />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/download"
+
+            android:layout_marginTop="20dp"
+            android:layout_toLeftOf="@+id/share"
+            />
+
+
+
+
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/dark_white_background"
+            android:layout_centerInParent="true"
+            ></LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

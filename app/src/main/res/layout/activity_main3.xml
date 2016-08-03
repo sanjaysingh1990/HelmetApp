@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DescriptionActivity"
+    android:background="@drawable/background"
+    >
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gray"
+        >
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:src="@drawable/replay_text"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:padding="10dp"
+            />
+
+    </FrameLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RP-013DCV-WHGR"
+        android:textColor="#a00000"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="19.5sp"
+        android:id="@+id/helmetname"
+        />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:layout_alignParentLeft="true"
+           android:layout_marginLeft="10dp"
+           android:layout_marginTop="20dp"
+           >
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               >
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:drawableTop="@mipmap/ic_launcher"
+                   android:text="Air Ventilation System"
+                   android:gravity="center"
+                   android:textSize="9sp"
+                   />
+
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:drawableTop="@mipmap/ic_launcher"
+                   android:text="         Padding             "
+                   android:layout_marginLeft="4dp"
+                   android:textSize="9sp"
+                   android:gravity="center"
+                   />
+
+           </LinearLayout>
+
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               >
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:drawableTop="@mipmap/ic_launcher"
+                   android:text="    Scratch Resistant     "
+                   android:gravity="center"
+                   android:textSize="9sp"
+                   />
+
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:drawableTop="@mipmap/ic_launcher"
+                   android:text="Micromatic Buckle"
+                   android:layout_marginLeft="4dp"
+                   android:layout_gravity="center"
+                   android:textSize="9sp"
+                   />
+
+           </LinearLayout>
+
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               >
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:drawableTop="@mipmap/ic_launcher"
+                   android:text="Air Ventilation System"
+                   android:gravity="center"
+                   android:textSize="9sp"
+                   />
+
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:drawableTop="@mipmap/ic_launcher"
+                   android:text="          Padding               "
+                   android:layout_marginLeft="4dp"
+                   android:layout_gravity="center"
+                   android:textSize="9sp"
+                   />
+
+           </LinearLayout>
+
+       </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:background="@android:drawable/picture_frame"
+            android:id="@+id/layout1"
+            >
+           <ImageView
+               android:layout_width="140dp"
+               android:layout_height="140dp"
+               android:src="@drawable/leo"
+               />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RP-013DCV-WHGR"
+                android:layout_gravity="center"
+                android:textColor="#000"
+                android:id="@+id/name1"
+                android:textSize="12sp"
+                />
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Locate Distributor"
+            android:layout_below="@+id/layout1"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="45dp"
+            android:textColor="#000"
+            android:layout_marginTop="10dp"
+            android:id="@+id/locate"
+            android:textSize="12sp"
+            />
+
+    </RelativeLayout>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Available Colors"
+    android:textColor="#a00000"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="10dp"
+    android:textSize="18sp"
+    android:id="@+id/availablecolors"
+    />
+<HorizontalScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            >
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="90dp"
+                android:src="@drawable/color1"
+                android:background="@android:drawable/picture_frame"
+                />
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="90dp"
+                android:src="@drawable/color2"
+                android:background="@android:drawable/picture_frame"
+                />
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="90dp"
+                android:src="@drawable/color3"
+                android:background="@android:drawable/picture_frame"
+                />
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="90dp"
+                android:src="@drawable/color3"
+                android:background="@android:drawable/picture_frame"
+                />
+
+        </LinearLayout>
+</HorizontalScrollView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Features"
+            android:textColor="#a00000"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="18sp"
+            android:id="@+id/features"
+            />
+
+        <TextView
+            android:id="@+id/desc1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- An aerodynamic shell design constructed using and advanced lightweight material"
+            android:layout_marginLeft="10dp"
+            android:textSize="9sp"
+            android:textColor="#000"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- A helmet liner and cheek pads made with a hypoallergenic and antimicrobial fabric"
+            android:layout_marginLeft="10dp"
+            android:textSize="10sp"
+            android:textColor="#000"
+            android:layout_marginTop="10dp"
+            android:id="@+id/desc2"
+
+            />
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    >
+    <Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#a00000"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:text="TRY IT !!"
+    android:gravity="center"
+    android:textColor="#fff"
+    android:textSize="18sp"
+    android:id="@+id/tryit"
+    android:layout_alignParentBottom="true"
+
+        />
+</RelativeLayout>
+
+</LinearLayout>

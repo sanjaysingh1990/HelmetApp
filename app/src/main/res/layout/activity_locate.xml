@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context="helmet.init.user.helmetapp.LocateActivity">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gray"
+        >
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:src="@drawable/replay_text"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:padding="10dp"
+            />
+</FrameLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@drawable/map"
+        android:scaleType="center"
+        />
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#770202"
+ android:textColor="#fff"
+    android:textSize="16sp"
+    android:gravity="center"
+    android:text="LOCATE ON MAP"
+    android:padding="5dp"
+    android:layout_marginTop="8dp"
+    android:id="@+id/locate"
+    />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="10dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+android:background="@android:drawable/picture_frame"
+        >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ABC Distributor"
+        android:textStyle="bold"
+
+        />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shop No. 123,XYZ Bazar"
+
+
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Delhi-110000"
+
+
+            /> <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+91-9876543210"
+
+
+        />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:drawable/picture_frame"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ABC Distributor"
+            android:textStyle="bold"
+
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shop No. 123,XYZ Bazar"
+
+
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Delhi-110000"
+
+
+            /> <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+91-9876543210"
+
+
+        />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:drawable/picture_frame"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ABC Distributor"
+            android:textStyle="bold"
+
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shop No. 123,XYZ Bazar"
+
+
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Delhi-110000"
+
+
+            /> <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+91-9876543210"
+
+
+        />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:drawable/picture_frame"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ABC Distributor"
+            android:textStyle="bold"
+
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shop No. 123,XYZ Bazar"
+
+
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Delhi-110000"
+
+
+            /> <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+91-9876543210"
+
+
+        />
+
+
+    </LinearLayout>
+</LinearLayout>
+
+</LinearLayout>
+</ScrollView>
