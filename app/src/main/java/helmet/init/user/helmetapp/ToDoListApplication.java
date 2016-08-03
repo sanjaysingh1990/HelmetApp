@@ -21,8 +21,8 @@ public static ImageLoader imageLoader;
 		ParseACL.setDefaultACL(defaultACL, true);*/
 		options = new DisplayImageOptions.Builder()
 
-		.showImageForEmptyUri(R.drawable.flip_up_category)
-		.showImageOnFail(R.drawable.flip_up_helmet)
+		.showImageForEmptyUri(R.drawable.loading)
+		.showImageOnFail(R.drawable.loading)
 		.cacheInMemory(true)
 		.cacheOnDisk(true)
 		.considerExifParams(true)

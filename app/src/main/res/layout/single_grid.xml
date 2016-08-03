@@ -32,7 +32,7 @@
                 android:scaleType="centerCrop"
                 android:adjustViewBounds="true"
                 android:layout_above="@+id/tv_species"
-                android:background="@drawable/flip_up_helmet"
+                android:background="@drawable/loading"
             />
             <!--android:background="?android:attr/selectableItemBackground"
 

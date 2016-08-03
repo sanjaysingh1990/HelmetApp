@@ -38,7 +38,7 @@ public class TabActivity extends AppCompatActivity {
     private void setupViewPager(ViewPager pager) {
         Adapter adapter = new Adapter(getSupportFragmentManager());
         adapter.addFragments(new OneFragment(), "Glossy");
-        adapter.addFragments(new OneFragment(), "Mat");
+        adapter.addFragments(new OneFragment(), "Matt");
         pager.setAdapter(adapter);
 
 

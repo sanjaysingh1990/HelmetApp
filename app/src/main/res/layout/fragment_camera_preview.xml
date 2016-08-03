@@ -7,7 +7,9 @@
     <FrameLayout
         android:id="@+id/fl_camera_preview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+
+        />
 
     <FrameLayout
         android:id="@+id/fl_switch_camera_font_or_back"
@@ -42,7 +44,9 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+
+                />
 
             <LinearLayout
                 android:id="@+id/ll_elapse_time"
@@ -73,7 +77,9 @@
             <ImageView
                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+
+                />
 
             <ImageButton
                 android:id="@+id/done"
@@ -84,6 +90,7 @@
                 android:background="?android:attr/selectableItemBackground"
                 android:layout_weight="0"
                 android:layout_gravity="center_vertical"
+                android:visibility="gone"
                 />
         </LinearLayout>
 
@@ -341,6 +348,7 @@
                          android:layout_centerVertical="true"
                          android:layout_alignParentLeft="true"
                          android:layout_marginLeft="20dp"
+
                          />
                  </RelativeLayout>
                 <ImageButton

@@ -6,6 +6,7 @@ import android.hardware.Camera;
 import android.media.MediaRecorder;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.OrientationEventListener;
 import android.view.View;
@@ -189,6 +190,7 @@ act=this;
 
 
         mCamera = getCameraInstance(camera_mode);
+
 
 
         CameraPreviewFragment.setCameraDisplayOrientation(this, camera_mode);

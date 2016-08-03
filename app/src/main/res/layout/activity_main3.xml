@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context=".DescriptionActivity"
     android:background="@drawable/background"
     >
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/gray"
+        android:layout_alignParentTop="true"
+android:id="@+id/logo"
+android:layout_weight="0"
         >
         <ImageView
             android:layout_width="200dp"
@@ -21,9 +24,24 @@
             android:layout_gravity="center"
             android:background="@android:color/transparent"
             android:padding="10dp"
+
             />
 
     </FrameLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scroll"
+        android:layout_below="@+id/logo"
+        android:layout_weight="1"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            >
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -54,26 +72,51 @@
                android:layout_height="wrap_content"
                android:orientation="horizontal"
                >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
 
-               <TextView
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:drawableTop="@mipmap/ic_launcher"
-                   android:text="Air Ventilation System"
-                   android:gravity="center"
-                   android:textSize="9sp"
-                   />
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/five"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
+        android:text="Air Ventilation System"
+        android:gravity="center"
+        android:textSize="9sp"
+        />
 
-               <TextView
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:drawableTop="@mipmap/ic_launcher"
-                   android:text="         Padding             "
-                   android:layout_marginLeft="4dp"
-                   android:textSize="9sp"
-                   android:gravity="center"
-                   />
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+<ImageView
+    android:layout_width="70dp"
+    android:layout_height="70dp"
+    android:src="@drawable/six"
+    />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="         Padding             "
+        android:layout_marginLeft="4dp"
+        android:textSize="9sp"
+        android:gravity="center"
+        />
+
+</LinearLayout>
+
 
            </LinearLayout>
 
@@ -83,26 +126,51 @@
                android:layout_height="wrap_content"
                android:orientation="horizontal"
                >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
 
-               <TextView
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:drawableTop="@mipmap/ic_launcher"
-                   android:text="    Scratch Resistant     "
-                   android:gravity="center"
-                   android:textSize="9sp"
-                   />
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/seven"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="    Scratch Resistant     "
+        android:gravity="center"
+        android:textSize="9sp"
+        />
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/eight"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Micromatic Buckle"
+        android:layout_marginLeft="2dp"
+        android:layout_gravity="center"
+        android:textSize="9sp"
+        />
 
 
-               <TextView
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:drawableTop="@mipmap/ic_launcher"
-                   android:text="Micromatic Buckle"
-                   android:layout_marginLeft="4dp"
-                   android:layout_gravity="center"
-                   android:textSize="9sp"
-                   />
+</LinearLayout>
+
 
            </LinearLayout>
 
@@ -112,26 +180,50 @@
                android:layout_height="wrap_content"
                android:orientation="horizontal"
                >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+<ImageView
+    android:layout_width="70dp"
+    android:layout_height="70dp"
+    android:src="@drawable/nine"
+    />
 
-               <TextView
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:drawableTop="@mipmap/ic_launcher"
-                   android:text="Air Ventilation System"
-                   android:gravity="center"
-                   android:textSize="9sp"
-                   />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="       800GM       "
+        android:gravity="center"
+        android:textSize="9sp"
+        />
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/ten"
+        android:layout_marginLeft="20dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="          CM/L-3291254              "
+        android:layout_marginLeft="4dp"
+        android:layout_gravity="center"
+        android:textSize="9sp"
+        />
+
+</LinearLayout>
 
 
-               <TextView
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:drawableTop="@mipmap/ic_launcher"
-                   android:text="          Padding               "
-                   android:layout_marginLeft="4dp"
-                   android:layout_gravity="center"
-                   android:textSize="9sp"
-                   />
 
            </LinearLayout>
 
@@ -143,14 +235,17 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="20dp"
+            android:layout_marginRight="5dp"
             android:background="@android:drawable/picture_frame"
             android:id="@+id/layout1"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="40dp"
             >
            <ImageView
-               android:layout_width="140dp"
-               android:layout_height="140dp"
+               android:layout_width="160dp"
+               android:layout_height="160dp"
                android:src="@drawable/leo"
+
                />
             <TextView
                 android:layout_width="wrap_content"
@@ -205,29 +300,27 @@
             <ImageView
                 android:layout_width="120dp"
                 android:layout_height="90dp"
-                android:src="@drawable/color1"
-                android:background="@android:drawable/picture_frame"
+                android:src="@drawable/one"
+
+
                 />
 
             <ImageView
                 android:layout_width="120dp"
                 android:layout_height="90dp"
-                android:src="@drawable/color2"
-                android:background="@android:drawable/picture_frame"
+                android:src="@drawable/two"
+
+                />
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="90dp"
+                android:src="@drawable/three"
                 />
 
             <ImageView
                 android:layout_width="120dp"
                 android:layout_height="90dp"
-                android:src="@drawable/color3"
-                android:background="@android:drawable/picture_frame"
-                />
-
-            <ImageView
-                android:layout_width="120dp"
-                android:layout_height="90dp"
-                android:src="@drawable/color3"
-                android:background="@android:drawable/picture_frame"
+                android:src="@drawable/four"
                 />
 
         </LinearLayout>
@@ -249,7 +342,7 @@
             android:layout_height="wrap_content"
             android:text="- An aerodynamic shell design constructed using and advanced lightweight material"
             android:layout_marginLeft="10dp"
-            android:textSize="9sp"
+            android:textSize="14sp"
             android:textColor="#000"
             android:layout_marginTop="10dp"
             />
@@ -259,16 +352,24 @@
             android:layout_height="wrap_content"
             android:text="- A helmet liner and cheek pads made with a hypoallergenic and antimicrobial fabric"
             android:layout_marginLeft="10dp"
-            android:textSize="10sp"
+            android:textSize="14sp"
             android:textColor="#000"
             android:layout_marginTop="10dp"
             android:id="@+id/desc2"
 
             />
-<RelativeLayout
+</LinearLayout>
+</ScrollView>
+
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="10dp"
+android:orientation="horizontal"
+    android:id="@+id/trybutton"
+    android:layout_alignParentBottom="true"
+    android:layout_below="@+id/scroll"
+    android:layout_weight="0"
+    android:layout_marginBottom="5dp"
     >
     <Button
     android:layout_width="match_parent"
@@ -277,13 +378,14 @@
     android:layout_marginLeft="5dp"
     android:layout_marginRight="5dp"
     android:text="TRY IT !!"
-    android:gravity="center"
+      android:gravity="center"
     android:textColor="#fff"
-    android:textSize="18sp"
+    android:textSize="20sp"
     android:id="@+id/tryit"
-    android:layout_alignParentBottom="true"
 
         />
-</RelativeLayout>
+</LinearLayout>
+
+
 
 </LinearLayout>

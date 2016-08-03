@@ -90,6 +90,8 @@ public class CameraPreviewFragment extends Fragment
     public static int flashMode;
     public static File pictureFile = null;
     public static byte[] imgdata;
+    File capturedImageFile=null;
+
     /**
      * Others section
      */
@@ -615,7 +617,7 @@ public class CameraPreviewFragment extends Fragment
             // Hide switch camera button
             mIbtnSwitchFrontOrBackCamera.setVisibility(View.INVISIBLE);
         //to check flash availabe or not
-        Camera.Parameters parameters = CustomCamera.mCamera.getParameters();
+       Camera.Parameters parameters = CustomCamera.mCamera.getParameters();
         List<String> flashModes = parameters.getSupportedFlashModes();
         if (flashModes != null && flashModes.contains(mFlashMode)) {
             parameters.setFlashMode(mFlashMode);
@@ -623,11 +625,13 @@ public class CameraPreviewFragment extends Fragment
         } else {
             camera_flash.setVisibility(View.INVISIBLE);
         }
+
        /* if (parameters.getSupportedFocusModes().contains(CameraActivity.Parameters.FOCUS_MODE_CONTINUOUS_PICTURE)) {
             parameters.setFocusMode(CameraActivity.Parameters.FOCUS_MODE_CONTINUOUS_PICTURE);
         }*/
         // Lock in the changes
         CustomCamera.mCamera.setParameters(parameters);
+
         return v;
     }
 
@@ -728,6 +732,7 @@ public class CameraPreviewFragment extends Fragment
         });
 
         //cancel button
+
         cancel1 = (ImageButton) v.findViewById(R.id.cancel1);
         cancel2 = (ImageButton) v.findViewById(R.id.cancel2);
         cancel3 = (ImageButton) v.findViewById(R.id.cancel3);
@@ -1069,6 +1074,17 @@ public class CameraPreviewFragment extends Fragment
             cancel1.setVisibility(View.VISIBLE);
             add1.setVisibility(View.GONE);
 
+
+
+/*            FragmentTransaction ft = ((FragmentActivity) getActivity())
+                    .getSupportFragmentManager().beginTransaction();
+            //ft.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_from_left);
+
+            ft.addToBackStack(null)
+                    .replace(R.id.fl_custom_camera,
+                            CameraReviewFragment.newInstance(capturedImageFile.getAbsolutePath()))
+                    .commitAllowingStateLoss();
+*/
         } else if (pos == 2) {
             //filename.add(1, "lnd" + System.currentTimeMillis() + ".jpg");
 
@@ -1151,7 +1167,7 @@ public class CameraPreviewFragment extends Fragment
                 cursor.close();
 
                 // Set image bitmap
-                final File capturedImageFile = new File(getTempDirectoryPath(), System.currentTimeMillis() + ".jpg");
+                capturedImageFile = new File(getTempDirectoryPath(), System.currentTimeMillis() + ".jpg");
                 Bitmap bm = CompressImage.compressImage(imgDecodableString);
                 bm.compress(Bitmap.CompressFormat.JPEG, 100, new FileOutputStream(capturedImageFile));
                 imgDecodableString = capturedImageFile.getAbsolutePath().toString();

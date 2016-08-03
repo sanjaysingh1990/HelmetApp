@@ -60,6 +60,7 @@ public class GalleryArrayAdapter extends RecyclerView.Adapter<GalleryArrayAdapte
 
 
         viewHolder.imgThumbnail.setOnClickListener(new Onclick(i));
+        viewHolder.shareall.setOnClickListener(new Onclick(i));
            }
 
     @Override
@@ -116,6 +117,19 @@ public class GalleryArrayAdapter extends RecyclerView.Adapter<GalleryArrayAdapte
                    // new DifferentShare(con).imageShare(mItems.get(pos).getUrl());
 
                     //new ImageDownloaderWhatsapp(con, 2).execute(mItems.get(pos).getUrl());
+
+                    Intent share = new Intent(android.content.Intent.ACTION_SEND);
+                    share.setType("text/plain");
+                    share.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+
+                    // Add data to the intent, the receiving app will decide
+                    // what to do with it.
+                  //  share.putExtra(Intent.EXTRA_SUBJECT, "Helmet image share");
+
+                    share.putExtra(Intent.EXTRA_TEXT, mItems.get(pos).getHelmet_image());
+
+                    con.startActivity(Intent.createChooser(share, "Share link!"));
+
                     break;
             }
         }

@@ -37,7 +37,18 @@ public class GalleryDataBean implements Serializable {
     }
 
 
-    String helmet_name,helmet_image;
+    String helmet_name;
+    String helmet_image;
+
+    public String getHelmet_feature() {
+        return helmet_feature;
+    }
+
+    public void setHelmet_feature(String helmet_feature) {
+        this.helmet_feature = helmet_feature;
+    }
+
+    String helmet_feature;
 
     public String getHelmet_name() {
         return helmet_name;

@@ -56,11 +56,11 @@ public class DescriptionActivity extends AppCompatActivity {
         tryit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Intent tryit=new Intent(DescriptionActivity.this,CameraActivity.class);
-                //startActivity(tryit);
-
-//                Intent tr=new Intent(DescriptionActivity.this,CustomCamera.class);
-  //              startActivityForResult(tr,100);
+               /* Intent tryit=new Intent(DescriptionActivity.this,CameraActivity.class);
+                startActivity(tryit);
+*/
+               // Intent tr=new Intent(DescriptionActivity.this,CustomCamera.class);
+                //startActivityForResult(tr,100);
 
             }
         });
