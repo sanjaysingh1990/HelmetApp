@@ -120,8 +120,8 @@ public class DescriptionActivity extends AppCompatActivity {
                /* Intent tryit=new Intent(DescriptionActivity.this,CameraActivity.class);
                 startActivity(tryit);
 */
-                // Intent tr=new Intent(DescriptionActivity.this,CustomCamera.class);
-                //startActivityForResult(tr,100);
+                 Intent tr=new Intent(DescriptionActivity.this,CustomCamera.class);
+                startActivityForResult(tr,100);
 
             }
         });

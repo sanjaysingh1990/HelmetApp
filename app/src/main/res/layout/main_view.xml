@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:pushtouch="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/setframe"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/black"
+        android:src="@mipmap/bg"
+        android:scaleType="centerCrop"
+        />
+
+    <helmet.fithelmet.SingleFingerView
+        android:id="@+id/tiv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_horizontal|top"
+        pushtouch:centerInParent="true"
+        pushtouch:image="@mipmap/front_helmet"
+        pushtouch:image_height="350dp"
+        pushtouch:image_width="280dp"
+        pushtouch:push_image="@mipmap/push_btn"
+        pushtouch:push_image_height="50dp"
+        pushtouch:push_image_width="50dp" />
+</FrameLayout>
+

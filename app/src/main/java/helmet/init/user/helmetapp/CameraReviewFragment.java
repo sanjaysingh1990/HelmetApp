@@ -98,7 +98,7 @@ public class CameraReviewFragment extends Fragment
 
            }
             CameraData cd=new CameraData();
-            if (urls.get("1") == null) {
+           /* if (urls.get("1") == null) {
                  cd.setFilename("lnd" + System.currentTimeMillis() + ".jpg");
                  cd.setImageurl(url);
                 urls.put("1", cd);
@@ -117,7 +117,12 @@ public class CameraReviewFragment extends Fragment
                 cd.setImageurl(url);
 
                 urls.put("4", cd);
-            }
+            }*/
+            urls.clear();
+            cd.setFilename("lnd" + System.currentTimeMillis() + ".jpg");
+            cd.setImageurl(url);
+            urls.put("1", cd);
+
             CamUtils.clearOldBackStack(getActivity());
         }
     }

@@ -71,12 +71,10 @@ public class CameraPreviewFragment extends Fragment
     private static int minute = 0;
     private static String RECORDED_FILE_PATH = null;
     private static int second = 0;
-    public ImageView gallery, image1, image2, image3, image4;
-    private ImageButton cancel1, cancel2, cancel3, cancel4;
+    public ImageView gallery;
     private Bitmap capturedImage;
     private static ImageButton camera_flash;
-    public ImageButton add1, add2, add3, add4;
-    public static int GALLERY_INTENT_CALLED = 200;
+   public static int GALLERY_INTENT_CALLED = 200;
     SoundPool soundPool;
     int shutterSound;
     /**
@@ -86,12 +84,12 @@ public class CameraPreviewFragment extends Fragment
     private static ImageButton mIbtnTakePhotoOrRecordVideo;
     private static TextView mTvElapseTime;
     private ImageButton done;
-    FrameLayout frame1, frame2, frame3, frame4;
-    public static int flashMode;
+     public static int flashMode;
     public static File pictureFile = null;
     public static byte[] imgdata;
     File capturedImageFile=null;
-
+    private FrameLayout setframe;
+    private ImageView selectedimage;
     /**
      * Others section
      */
@@ -165,8 +163,6 @@ public class CameraPreviewFragment extends Fragment
         }
     };
     private FrameLayout mFlCameraPreview;
-    private LinearLayout mFlSwitchFrontOrBackCamera;
-    private FrameLayout mFlTakePhotoOrRecordVideo;
     private ImageButton mIbtnClose;
 
     private ImageButton mIbtnSwitchFrontOrBackCamera;
@@ -450,8 +446,10 @@ public class CameraPreviewFragment extends Fragment
     public void onClick(View view) {
         if (view.getId() == R.id.ibtn_close) {
             // Close current activity
-            getActivity().finish();
-        } else if (view.getId() == R.id.ibtn_take_photo_or_record_video) {
+            CameraReviewFragment.urls.clear();
+            setframe.setVisibility(View.GONE);
+
+           } else if (view.getId() == R.id.ibtn_take_photo_or_record_video) {
             /**
              * Need check currently user choose Take Photo mode or Record Video mode.
              * Depend on which mode, use Action
@@ -619,8 +617,10 @@ public class CameraPreviewFragment extends Fragment
         //to check flash availabe or not
        Camera.Parameters parameters = CustomCamera.mCamera.getParameters();
         List<String> flashModes = parameters.getSupportedFlashModes();
-        if (flashModes != null && flashModes.contains(mFlashMode)) {
-            parameters.setFlashMode(mFlashMode);
+//        Toast.makeText(getActivity(),flashModes.size()+"",Toast.LENGTH_SHORT).show();
+        if (flashModes != null) {
+           // parameters.setFlashMode(mFlashMode);
+            parameters.setFlashMode(Camera.Parameters.FLASH_MODE_ON);
             camera_flash.setVisibility(View.VISIBLE);
         } else {
             camera_flash.setVisibility(View.INVISIBLE);
@@ -659,11 +659,10 @@ public class CameraPreviewFragment extends Fragment
 
     private void initialViews(View v) {
         mFlCameraPreview = (FrameLayout) v.findViewById(R.id.fl_camera_preview);
-        mFlSwitchFrontOrBackCamera = (LinearLayout) v.findViewById(R.id.fl_take_photo_or_record_video);
-        mFlTakePhotoOrRecordVideo = (FrameLayout) v.findViewById(R.id.fl_switch_camera_font_or_back);
-
+        setframe= (FrameLayout) v.findViewById(R.id.setframe);
+        selectedimage= (ImageView) v.findViewById(R.id.image);
         mIbtnClose = (ImageButton) v.findViewById(R.id.ibtn_close);
-
+        setframe.setVisibility(View.GONE);
         mIbtnSwitchFrontOrBackCamera = (ImageButton) v.findViewById(
                 R.id.ibtn_switch_back_or_front_camera);
         mIbtnSwitchTakePhotoOrRecordVideo = (ImageButton) v.findViewById(
@@ -675,23 +674,7 @@ public class CameraPreviewFragment extends Fragment
         mTvElapseTime = (TextView) v.findViewById(
                 R.id.tv_elapse_time);
 
-//frame layout reference
-        frame1 = (FrameLayout) v.findViewById(R.id.frame1);
-        frame2 = (FrameLayout) v.findViewById(R.id.frame2);
-        frame3 = (FrameLayout) v.findViewById(R.id.frame3);
-        frame4 = (FrameLayout) v.findViewById(R.id.frame4);
 
-        //camera selection images
-        image1 = (ImageView) v.findViewById(R.id.image1);
-        image2 = (ImageView) v.findViewById(R.id.image2);
-        image3 = (ImageView) v.findViewById(R.id.image3);
-        image4 = (ImageView) v.findViewById(R.id.image4);
-
-        //add icons
-        add1 = (ImageButton) v.findViewById(R.id.add1);
-        add2 = (ImageButton) v.findViewById(R.id.add2);
-        add3 = (ImageButton) v.findViewById(R.id.add3);
-        add4 = (ImageButton) v.findViewById(R.id.add4);
 
 
         //getting height
@@ -702,12 +685,7 @@ public class CameraPreviewFragment extends Fragment
         DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
 
         int heightwidth = (displayMetrics.widthPixels) / 4;
-        FrameLayout.LayoutParams layoutParams3 = new FrameLayout.LayoutParams(heightwidth - 20, heightwidth - 20);
-        //images layout
-        image1.setLayoutParams(layoutParams3);
-        image2.setLayoutParams(layoutParams3);
-        image3.setLayoutParams(layoutParams3);
-        image4.setLayoutParams(layoutParams3);
+
         //gallery listener
 
         gallery = (ImageView) v.findViewById(R.id.showimg);
@@ -731,12 +709,6 @@ public class CameraPreviewFragment extends Fragment
             }
         });
 
-        //cancel button
-
-        cancel1 = (ImageButton) v.findViewById(R.id.cancel1);
-        cancel2 = (ImageButton) v.findViewById(R.id.cancel2);
-        cancel3 = (ImageButton) v.findViewById(R.id.cancel3);
-        cancel4 = (ImageButton) v.findViewById(R.id.cancel4);
 
         //camera_splash
         camera_flash = (ImageButton) v.findViewById(R.id.camera_flash);
@@ -768,56 +740,6 @@ public class CameraPreviewFragment extends Fragment
 
                 }
             }
-        });
-//cancel1 events
-        cancel1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                CameraReviewFragment.urls.remove("1");
-                image1.setImageDrawable(null);
-                cancel1.setVisibility(View.GONE);
-                frame1.setBackgroundResource(R.drawable.rounded_corners_image);
-                add1.setVisibility(View.VISIBLE);
-            }
-        });
-//cancel2 events
-
-        cancel2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                CameraReviewFragment.urls.remove("2");
-                image2.setImageDrawable(null);
-                cancel2.setVisibility(View.GONE);
-                frame2.setBackgroundResource(R.drawable.rounded_corners_image);
-                add2.setVisibility(View.VISIBLE);
-            }
-
-        });
-        //cancel3 events
-
-        cancel3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                CameraReviewFragment.urls.remove("3");
-                image3.setImageDrawable(null);
-                cancel3.setVisibility(View.GONE);
-                frame3.setBackgroundResource(R.drawable.rounded_corners_image);
-                add3.setVisibility(View.VISIBLE);
-            }
-
-        });
-        //cancel4 events
-
-        cancel4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                CameraReviewFragment.urls.remove("4");
-                image4.setImageDrawable(null);
-                cancel4.setVisibility(View.GONE);
-                frame4.setBackgroundResource(R.drawable.rounded_corners_image);
-                add4.setVisibility(View.VISIBLE);
-            }
-
         });
 //done button
         done = (ImageButton) v.findViewById(R.id.done);
@@ -907,8 +829,7 @@ public class CameraPreviewFragment extends Fragment
             mLpTakePhotoOrRecordVideo.gravity = Gravity.TOP;*/
 
             // Set params
-            mFlSwitchFrontOrBackCamera.setLayoutParams(mLpFlSwitchFrontOrBackCamera);
-            //  mFlTakePhotoOrRecordVideo.setLayoutParams(mLpTakePhotoOrRecordVideo);
+             //  mFlTakePhotoOrRecordVideo.setLayoutParams(mLpTakePhotoOrRecordVideo);
 
             // The bar for cropping
             top_bar = height_bar;
@@ -965,6 +886,19 @@ public class CameraPreviewFragment extends Fragment
     @Override
     public void onResume() {
         super.onResume();
+        try {
+            if (getActivity().getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_AUTOFOCUS)) {
+                CustomCamera.mCamera.autoFocus(new Camera.AutoFocusCallback() {
+                    @Override
+                    public void onAutoFocus(boolean success, Camera camera) {
+
+                    }
+                });
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         updateImages();
 
     }
@@ -986,17 +920,13 @@ public class CameraPreviewFragment extends Fragment
         @Override
         protected void onPostExecute(Bitmap bitmap) {
             if (bitmap != null)
-                setImage(bitmap, pos);
+                setImage(bitmap);
 
         }
     }
 
     class CompressGalleryPic extends AsyncTask<String, Void, Bitmap> {
-        int pos;
 
-        public CompressGalleryPic(int pos) {
-            this.pos = pos;
-        }
 
 
         @Override
@@ -1006,12 +936,11 @@ public class CameraPreviewFragment extends Fragment
                 Bitmap bm = CompressImage.compressImage(urls[0]);
                 bm.compress(Bitmap.CompressFormat.JPEG, 100, new FileOutputStream(capturedImageFile));
                 final String url = capturedImageFile.getAbsolutePath().toString();
-                if (CameraReviewFragment.urls.get(pos + "") == null) {
-                    CameraData cd = new CameraData();
-                    cd.setFilename("lnd" + System.currentTimeMillis() + ".jpg");
-                    cd.setImageurl(url);
-                    CameraReviewFragment.urls.put(pos + "", cd);
-                }
+                CameraReviewFragment.urls.clear();
+                CameraData cd=new CameraData();
+                cd.setFilename("lnd" + System.currentTimeMillis() + ".jpg");
+                cd.setImageurl(url);
+                CameraReviewFragment.urls.put("1", cd);
                 return bm;
             } catch (Exception ex) {
 
@@ -1023,7 +952,7 @@ public class CameraPreviewFragment extends Fragment
         @Override
         protected void onPostExecute(Bitmap bitmap) {
             if (bitmap != null)
-                setImage(bitmap, pos);
+                setImage(bitmap);
 
         }
     }
@@ -1065,52 +994,10 @@ public class CameraPreviewFragment extends Fragment
 
     }
 
-    private void setImage(Bitmap capturedImage, int pos) {
-        if (pos == 1) {
-            // filename.add(0, "lnd" + System.currentTimeMillis() + ".jpg");
-            // imageurl.add(0, url);
-            image1.setImageBitmap(capturedImage);
-            frame1.setBackgroundResource(R.drawable.rounded_corners_image_selected);
-            cancel1.setVisibility(View.VISIBLE);
-            add1.setVisibility(View.GONE);
+    private void setImage(Bitmap capturedImage) {
 
-
-
-/*            FragmentTransaction ft = ((FragmentActivity) getActivity())
-                    .getSupportFragmentManager().beginTransaction();
-            //ft.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_from_left);
-
-            ft.addToBackStack(null)
-                    .replace(R.id.fl_custom_camera,
-                            CameraReviewFragment.newInstance(capturedImageFile.getAbsolutePath()))
-                    .commitAllowingStateLoss();
-*/
-        } else if (pos == 2) {
-            //filename.add(1, "lnd" + System.currentTimeMillis() + ".jpg");
-
-            //  imageurl.add(1, url);
-            image2.setImageBitmap(capturedImage);
-            frame2.setBackgroundResource(R.drawable.rounded_corners_image_selected);
-            cancel2.setVisibility(View.VISIBLE);
-            add2.setVisibility(View.GONE);
-
-        } else if (pos == 3) {
-            //  filename.add(2, "lnd" + System.currentTimeMillis() + ".jpgBitmap myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());");
-
-            //  imageurl.add(2, url);
-            image3.setImageBitmap(capturedImage);
-            frame3.setBackgroundResource(R.drawable.rounded_corners_image_selected);
-            cancel3.setVisibility(View.VISIBLE);
-            add3.setVisibility(View.GONE);
-        } else if (pos == 4) {
-            //filename.add(3, "lnd" + System.currentTimeMillis() + ".jpg");
-
-            // imageurl.add(3, url);
-            image4.setImageBitmap(capturedImage);
-            frame4.setBackgroundResource(R.drawable.rounded_corners_image_selected);
-            cancel4.setVisibility(View.VISIBLE);
-            add4.setVisibility(View.GONE);
-        }
+        setframe.setVisibility(View.VISIBLE);
+        selectedimage.setImageBitmap(capturedImage);
     }
 
     class Myloader extends AsyncTask<Void, Void, Bitmap> {
@@ -1169,22 +1056,14 @@ public class CameraPreviewFragment extends Fragment
                 // Set image bitmap
                 capturedImageFile = new File(getTempDirectoryPath(), System.currentTimeMillis() + ".jpg");
                 Bitmap bm = CompressImage.compressImage(imgDecodableString);
-                bm.compress(Bitmap.CompressFormat.JPEG, 100, new FileOutputStream(capturedImageFile));
-                imgDecodableString = capturedImageFile.getAbsolutePath().toString();
+                setframe.setVisibility(View.VISIBLE);
+                selectedimage.setImageBitmap(bm);
+                //bm.compress(Bitmap.CompressFormat.JPEG, 100, new FileOutputStream(capturedImageFile));
+                //imgDecodableString = capturedImageFile.getAbsolutePath().toString();
                 //  gallery.setImageBitmap(bm);
-                if (CameraReviewFragment.urls.get("1") == null) {
-                    new CompressGalleryPic(1).execute(imgDecodableString);
-                } else if (CameraReviewFragment.urls.get("2") == null) {
-                    new CompressGalleryPic(2).execute(imgDecodableString);
 
-                } else if (CameraReviewFragment.urls.get("3") == null) {
-                    new CompressGalleryPic(3).execute(imgDecodableString);
+              //      new CompressGalleryPic().execute(imgDecodableString);
 
-
-                } else if (CameraReviewFragment.urls.get("4") == null) {
-                    new CompressGalleryPic(4).execute(imgDecodableString);
-
-                }
                 //firs t image
                 //ByteArrayOutputStream stream = new ByteArrayOutputStream();
                 // Must compress the Image to reduce image size to make upload easy
