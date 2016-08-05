@@ -13,16 +13,15 @@ import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -30,7 +29,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class OneFragment extends Fragment {
+public class TwoFragment extends Fragment {
 
 
     ArrayList<GalleryDataBean> data=new ArrayList<GalleryDataBean>();
@@ -41,7 +40,7 @@ public class OneFragment extends Fragment {
     boolean flag=true;
     RecyclerView.LayoutManager 	mLayoutManager;
 
-    public OneFragment() {
+    public TwoFragment() {
         // Required empty public constructor
     }
 
@@ -76,54 +75,6 @@ public class OneFragment extends Fragment {
 
     private void getData() {
 
-       /* RequestQueue queue = Volley.newRequestQueue(getActivity());
-        StringRequest stringRequest = new StringRequest("http://sikhdiary.com/Helmet/helmet.php",
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                       // showJSON(response);
-                        prog.setVisibility(View.GONE);
-                       // Toast.makeText(getActivity(),"get data"+response.toString(),Toast.LENGTH_LONG).show();
-                       // Log.e("json",response.toString());
-                        try {
-                            JSONObject jobj = new JSONObject(response.toString());
-                            JSONArray jarray=jobj.getJSONArray("data");
-
-                            for(int i=0;i<jarray.length();i++){
-                                JSONObject jsonObject=jarray.getJSONObject(i);
-
-                                GalleryDataBean bean=new GalleryDataBean();
-                                bean.setHelmet_name(jsonObject.getString("helmet_name"));
-                                bean.setHelmet_image(jsonObject.getString("helmet_image"));
-
-                                data.add(bean);
-                            }
-adapter.notifyDataSetChanged();
-                            }
-                        catch (Exception e){
-                            Log.e("exception",e.toString());
-                        }
-
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        prog.setVisibility(View.GONE);
-
-                       Toast.makeText(getActivity(),error.getMessage(), Toast.LENGTH_LONG).show();
-                        Log.e("error",error.toString());
-                    }
-                });
-
-        RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
-        requestQueue.add(stringRequest);
-    }
-*/
-
-
-
-
         RequestQueue queue = Volley.newRequestQueue(getActivity());
         StringRequest stringRequest =  new StringRequest(Request.Method.POST, "http://sikhdiary.com/Helmet/helmetf.php",
                 new Response.Listener<String>() {
@@ -131,12 +82,11 @@ adapter.notifyDataSetChanged();
                     public void onResponse(String response) {
                         // showJSON(response);
                         prog.setVisibility(View.GONE);
-                     //   Toast.makeText(getActivity(),"get data"+response.toString(),Toast.LENGTH_LONG).show();
+                        // Toast.makeText(getActivity(),"get data"+response.toString(),Toast.LENGTH_LONG).show();
                         // Log.e("json",response.toString());
                         try {
                             JSONObject jobj = new JSONObject(response.toString());
                             JSONArray jarray=jobj.getJSONArray("data");
-
 
                             if(jarray.length()==0){
                                 Toast.makeText(getActivity(),"No data",Toast.LENGTH_LONG).show();
@@ -178,11 +128,11 @@ adapter.notifyDataSetChanged();
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
 
-                params.put("rqid", 1+"");
+                params.put("rqid", 2+"");
 
                 return params;
             }
-        };
+            };
 
 
         RequestQueue requestQueue = Volley.newRequestQueue(getActivity());

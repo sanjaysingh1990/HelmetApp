@@ -22,18 +22,31 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             >
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
-            <com.android.volley.toolbox.NetworkImageView
 
-            android:layout_alignParentTop="true"
-                android:id="@+id/img_thumbnail"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:scaleType="centerCrop"
-                android:adjustViewBounds="true"
-                android:layout_above="@+id/tv_species"
-                android:background="@drawable/loading"
-            />
+    <ImageView
+
+        android:layout_alignParentTop="true"
+        android:id="@+id/img_thumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:layout_above="@+id/tv_species"
+        />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/loader"
+        android:layout_gravity="center"
+
+        />
+</FrameLayout>
+
             <!--android:background="?android:attr/selectableItemBackground"
 
                 -->

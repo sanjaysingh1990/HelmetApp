@@ -39,6 +39,7 @@ public class MotoCrossCategory extends AppCompatActivity {
 
 
                 Intent activity=new Intent(MotoCrossCategory.this,TabActivity.class);
+                activity.putExtra("category",13);
                 startActivity(activity);
             }
         });

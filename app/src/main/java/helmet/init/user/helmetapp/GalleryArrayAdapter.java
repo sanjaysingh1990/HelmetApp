@@ -2,16 +2,26 @@ package helmet.init.user.helmetapp;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.Typeface;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.android.volley.toolbox.ImageLoader;
+
+import com.nostra13.universalimageloader.core.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.assist.FailReason;
+import com.nostra13.universalimageloader.core.listener.ImageLoadingProgressListener;
+import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
+import com.squareup.picasso.Callback;
+import com.squareup.picasso.Picasso;
 
 
 import java.util.ArrayList;
@@ -22,10 +32,11 @@ import java.util.ArrayList;
 public class GalleryArrayAdapter extends RecyclerView.Adapter<GalleryArrayAdapter.ViewHolder> {
     private LayoutInflater mInflater;
      ArrayList<GalleryDataBean> mItems = new ArrayList<GalleryDataBean>();
-    ImageLoader imageLoader = AppController.getInstance().getImageLoader();
+   //com.android.volley.toolbox.ImageLoader imageLoader = AppController.getInstance().getImageLoader();
     GalleryDataBean nature;
     Context con;
     int position;
+    //public static ImageLoader imageLoader=new ImageLoader().getInstance();
 
     public GalleryArrayAdapter(Context context, ArrayList<GalleryDataBean> values) {
         con = context;
@@ -44,20 +55,70 @@ public class GalleryArrayAdapter extends RecyclerView.Adapter<GalleryArrayAdapte
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(final ViewHolder viewHolder, int i) {
       nature= mItems.get(i);
-      //  viewHolder.whatappshare.setOnClickListener(new Onclick(i));
-       // viewHolder.shareall.setOnClickListener(new Onclick(i));
 
         Typeface custom =Typeface.createFromAsset(con.getAssets(), "fonts/gillsanssemibolditalic.ttf");
         viewHolder.name.setTypeface(custom);
 
-        viewHolder.imgThumbnail.setImageUrl(nature.getHelmet_image(),imageLoader);
+ /*    viewHolder.imgThumbnail.setImageUrl(nature.getHelmet_image(),imageLoader,new SimpleImageLoadingListener() {
+        o @Override
+         public void onLoadingStarted(String imageUri, View view) {
 
-//        ToDoListApplication.imageLoader.displayImage(nature.getHelmet_image(),viewHolder.imgThumbnail,ToDoListApplication.options);
+             ((ItemViewHolder) holder).loader.setVisibility(View.VISIBLE);
+         }
+
+         @Override
+         public void onLoadingFailed(String imageUri, View view, FailReason failReason) {
+             ((ItemViewHolder) holder).loader.setVisibility(View.GONE);
+         }
+
+         @Override
+         public void onLoadingComplete(String imageUri, View view, Bitmap loadedImage) {
+             ((ItemViewHolder) holder).loader.setVisibility(View.GONE);
+         }
+     }, new ImageLoadingProgressListener() {
+         @Override
+         public void onPrgressUpdate(String imageUri, View view, int current, int total) {
+
+         }
+     });
+*/
+
+    /*ToDoListApplication.imageLoader.displayImage(nature.getHelmet_image(),viewHolder.imgThumbnail,ToDoListApplication.options,new SimpleImageLoadingListener(){
+    @Override
+    public void onLoadingStarted(String imageUri, View view)
+    {
+        viewHolder.loader.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void onLoadingFailed(String imageUri, View view, FailReason failReason)
+    {
+        viewHolder.loader.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void onLoadingComplete(String imageUri, View view, Bitmap loadedImage)
+    {
+        viewHolder.loader.setVisibility(View.GONE);
+    }
+});*/
         viewHolder.name.setText(nature.getHelmet_name());
-//        ToDoListApplication.imageLoader.displayImage(nature.getUrl(), viewHolder.imgThumbnail, ToDoListApplication.options);
+     //   viewHolder.imgThumbnail.setImageUrl(nature.getHelmet_image(),imageLoader);
+       // AppController.imageLoader.displayImage(nature.getHelmet_image(),viewHolder.imgThumbnail,AppController.options);
+                //.imageLoader.displayImage(nature.getHelmet_image(), viewHolder.imgThumbnail, ToDoListApplication.options);
+        Picasso.with(con).load(nature.getHelmet_image()).into(viewHolder.imgThumbnail, new Callback() {
+            @Override
+            public void onSuccess() {
+                viewHolder.loader.setVisibility(View.GONE);
+            }
 
+            @Override
+            public void onError() {
+                viewHolder.loader.setVisibility(View.GONE);
+            }
+        });
 
         viewHolder.imgThumbnail.setOnClickListener(new Onclick(i));
         viewHolder.shareall.setOnClickListener(new Onclick(i));
@@ -72,21 +133,23 @@ public class GalleryArrayAdapter extends RecyclerView.Adapter<GalleryArrayAdapte
     class ViewHolder extends RecyclerView.ViewHolder {
 
         ImageButton whatappshare, shareall;
-        NetworkImageView imgThumbnail;
+        ImageView imgThumbnail;
         TextView name;
+        ProgressBar loader;
 
 
         // public TextView tvspecies;
         public ViewHolder(View itemView) {
             super(itemView);
-            if (imageLoader == null)
-                imageLoader = AppController.getInstance().getImageLoader();
+        //    if (imageLoader == null)
+             //   imageLoader = AppController.getInstance().getImageLoader();
 
-            imgThumbnail = (NetworkImageView) itemView
+            imgThumbnail = (ImageView) itemView
                     .findViewById(R.id.img_thumbnail);
             shareall = (ImageButton) itemView.findViewById(R.id.shareall);
             name = (TextView)itemView.findViewById(R.id.name);
-        }
+            loader=(ProgressBar)itemView.findViewById(R.id.loader)
+;        }
     }
 
     class Onclick implements View.OnClickListener {
@@ -102,6 +165,13 @@ public class GalleryArrayAdapter extends RecyclerView.Adapter<GalleryArrayAdapte
                 case R.id.img_thumbnail:
 
                     Intent detail=new Intent(con,DescriptionActivity.class);
+                    detail.putExtra("helmet_id",mItems.get(pos).getHelmet_id());
+
+                    detail.putExtra("helmet_image",mItems.get(pos).getHelmet_image());
+
+                    detail.putExtra("helmet_name",mItems.get(pos).getHelmet_name());
+
+                    detail.putExtra("helmet_feature",mItems.get(pos).getCategory_feature());
                     con.startActivity(detail);
 
                     //Intent i=new Intent(con, FullDetailActivity.class);

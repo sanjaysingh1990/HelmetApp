@@ -28,6 +28,7 @@ public static ImageLoader imageLoader;
 		.considerExifParams(true)
 		.bitmapConfig(Bitmap.Config.RGB_565)
 		.build();
+
 		imageLoader= ImageLoader.getInstance();
 		this.imageLoader.init(ImageLoaderConfiguration.createDefault(this));
 	}

@@ -1,7 +1,5 @@
 package helmet.init.user.helmetapp;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
@@ -17,12 +15,10 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -30,7 +26,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class OneFragment extends Fragment {
+public class ElexMatt extends Fragment {
 
 
     ArrayList<GalleryDataBean> data=new ArrayList<GalleryDataBean>();
@@ -41,7 +37,7 @@ public class OneFragment extends Fragment {
     boolean flag=true;
     RecyclerView.LayoutManager 	mLayoutManager;
 
-    public OneFragment() {
+    public ElexMatt() {
         // Required empty public constructor
     }
 
@@ -137,7 +133,6 @@ adapter.notifyDataSetChanged();
                             JSONObject jobj = new JSONObject(response.toString());
                             JSONArray jarray=jobj.getJSONArray("data");
 
-
                             if(jarray.length()==0){
                                 Toast.makeText(getActivity(),"No data",Toast.LENGTH_LONG).show();
                             }
@@ -178,7 +173,7 @@ adapter.notifyDataSetChanged();
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
 
-                params.put("rqid", 1+"");
+                params.put("rqid", 4+"");
 
                 return params;
             }

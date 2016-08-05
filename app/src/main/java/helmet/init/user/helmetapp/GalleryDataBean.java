@@ -7,48 +7,53 @@ import java.io.Serializable;
  */
 public class GalleryDataBean implements Serializable {
 
-    String url,name,id;
-
-    public String getId() {
-        return id;
-    }
-    public void setId(String id) {
-        this.id = id;
-    }
-
-
-    public String getUrl() {
-
-        return url;
-    }
-    public void setUrl(String url)
-
-    {
-        this.url = url;
-    }
-    public String getName()
-    {
-        return name;
-    }
-    public void setName(String name)
-
-    {
-        this.name = name;
-    }
-
 
     String helmet_name;
     String helmet_image;
+    String category_feature;
+    String category_name;
+    String helmet_id;
 
-    public String getHelmet_feature() {
-        return helmet_feature;
+    public String getImage() {
+        return image;
     }
 
-    public void setHelmet_feature(String helmet_feature) {
-        this.helmet_feature = helmet_feature;
+    public void setImage(String image) {
+        this.image = image;
     }
 
-    String helmet_feature;
+    String image;
+
+
+    public String getHelmet_id() {
+        return helmet_id;
+    }
+
+    public void setHelmet_id(String helmet_id) {
+        this.helmet_id = helmet_id;
+    }
+
+    public String getCategory_name() {
+        return category_name;
+    }
+
+    public void setCategory_name(String category_name) {
+        this.category_name = category_name;
+    }
+
+    public String getCategory_feature() {
+        return category_feature;
+    }
+
+    public void setCategory_feature(String category_feature) {
+        this.category_feature = category_feature;
+    }
+
+
+
+
+
+
 
     public String getHelmet_name() {
         return helmet_name;

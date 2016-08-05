@@ -245,7 +245,7 @@ android:layout_weight="0"
                android:layout_width="160dp"
                android:layout_height="160dp"
                android:src="@drawable/leo"
-
+                android:id="@+id/helmetimage"
                />
             <TextView
                 android:layout_width="wrap_content"
@@ -286,18 +286,13 @@ android:layout_weight="0"
     android:textSize="18sp"
     android:id="@+id/availablecolors"
     />
-<HorizontalScrollView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-
-    >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginLeft="10dp"
             >
-            <ImageView
+         <!--   <ImageView
                 android:layout_width="120dp"
                 android:layout_height="90dp"
                 android:src="@drawable/one"
@@ -322,9 +317,16 @@ android:layout_weight="0"
                 android:layout_height="90dp"
                 android:src="@drawable/four"
                 />
+-->
 
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:id="@+id/image_recycler"
+                >
+
+            </android.support.v7.widget.RecyclerView>
         </LinearLayout>
-</HorizontalScrollView>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -347,7 +349,7 @@ android:layout_weight="0"
             android:layout_marginTop="10dp"
             />
 
-        <TextView
+       <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="- A helmet liner and cheek pads made with a hypoallergenic and antimicrobial fabric"
@@ -356,7 +358,7 @@ android:layout_weight="0"
             android:textColor="#000"
             android:layout_marginTop="10dp"
             android:id="@+id/desc2"
-
+            android:visibility="gone"
             />
 </LinearLayout>
 </ScrollView>

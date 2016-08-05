@@ -88,6 +88,8 @@ public class OpenFaceCategory extends AppCompatActivity {
 
 
                 Intent act=new Intent(OpenFaceCategory.this,TabActivity.class);
+
+                act.putExtra("category",5);
                 startActivity(act);
             }
         });
@@ -123,6 +125,8 @@ public class OpenFaceCategory extends AppCompatActivity {
 
 
                 Intent act=new Intent(OpenFaceCategory.this,TabActivity.class);
+                act.putExtra("category",6);
+
                 startActivity(act);
             }
         });
@@ -160,6 +164,8 @@ public class OpenFaceCategory extends AppCompatActivity {
                 storm_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 Intent act=new Intent(OpenFaceCategory.this,TabActivity.class);
+                act.putExtra("category",7);
+
                 startActivity(act);
             }
         });
@@ -194,6 +200,8 @@ public class OpenFaceCategory extends AppCompatActivity {
 
 
                 Intent act=new Intent(OpenFaceCategory.this,TabActivity.class);
+                act.putExtra("category",8);
+
                 startActivity(act);
             }
         });
@@ -228,6 +236,8 @@ public class OpenFaceCategory extends AppCompatActivity {
 
 
                 Intent act=new Intent(OpenFaceCategory.this,TabActivity.class);
+                act.putExtra("category",9);
+
                 startActivity(act);
             }
         });
@@ -262,6 +272,8 @@ public class OpenFaceCategory extends AppCompatActivity {
 
 
                 Intent act=new Intent(OpenFaceCategory.this,TabActivity.class);
+                act.putExtra("category",10);
+
                 startActivity(act);
             }
         });
@@ -296,6 +308,8 @@ public class OpenFaceCategory extends AppCompatActivity {
 
 
                 Intent act=new Intent(OpenFaceCategory.this,TabActivity.class);
+                act.putExtra("category",11);
+
                 startActivity(act);
             }
         });
@@ -330,6 +344,8 @@ public class OpenFaceCategory extends AppCompatActivity {
 
 
                 Intent act=new Intent(OpenFaceCategory.this,TabActivity.class);
+                act.putExtra("category",12);
+
                 startActivity(act);
             }
         });

@@ -57,6 +57,7 @@ public class FullFaceCategory extends AppCompatActivity {
                 watercategory.setTextColor(Color.parseColor("#ffffff"));
 
                 Intent activity=new Intent(FullFaceCategory.this,TabActivity.class);
+                activity.putExtra("category",2);
                 startActivity(activity);
             }
         });
@@ -75,6 +76,7 @@ public class FullFaceCategory extends AppCompatActivity {
                 watercategory.setTextColor(Color.parseColor("#ffffff"));
 
                 Intent activity=new Intent(FullFaceCategory.this,TabActivity.class);
+                activity.putExtra("category",3);
                 startActivity(activity);
             }
         });
@@ -93,6 +95,7 @@ public class FullFaceCategory extends AppCompatActivity {
                 elexcategory.setTextColor(Color.parseColor("#ffffff"));
 
                 Intent activity=new Intent(FullFaceCategory.this,TabActivity.class);
+                activity.putExtra("category",4);
                 startActivity(activity);
             }
         });
