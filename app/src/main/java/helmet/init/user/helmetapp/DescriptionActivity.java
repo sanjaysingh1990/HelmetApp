@@ -159,6 +159,7 @@ public class DescriptionActivity extends AppCompatActivity {
 
 
                             }
+
                             //imgAdapter.notifyDataSetChanged();
                             Log.e("colors array", images.size()+"");
                            // imgAdapter.notifyDataSetChanged();

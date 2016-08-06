@@ -47,13 +47,13 @@ public class FullFaceCategory extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                elex.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_background));
+               // elex.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_background));
                 elexcategory.setTextColor(Color.parseColor("#ff0000"));
 
-                leo.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+                //leo.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
                 leocategory.setTextColor(Color.parseColor("#ffffff"));
 
-                water.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+                //water.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
                 watercategory.setTextColor(Color.parseColor("#ffffff"));
 
                 Intent activity=new Intent(FullFaceCategory.this,TabActivity.class);
@@ -66,13 +66,13 @@ public class FullFaceCategory extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                leo.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_background));
+                //leo.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_background));
                 leocategory.setTextColor(Color.parseColor("#ff0000"));
 
-                elex.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+                //elex.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
                 elexcategory.setTextColor(Color.parseColor("#ffffff"));
 
-                water.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+                //water.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
                 watercategory.setTextColor(Color.parseColor("#ffffff"));
 
                 Intent activity=new Intent(FullFaceCategory.this,TabActivity.class);
@@ -85,13 +85,13 @@ public class FullFaceCategory extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                water.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_background));
+                //water.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_background));
                 watercategory.setTextColor(Color.parseColor("#ff0000"));
 
-                leo.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+                //leo.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
                 leocategory.setTextColor(Color.parseColor("#ffffff"));
 
-                elex.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+                //elex.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
                 elexcategory.setTextColor(Color.parseColor("#ffffff"));
 
                 Intent activity=new Intent(FullFaceCategory.this,TabActivity.class);

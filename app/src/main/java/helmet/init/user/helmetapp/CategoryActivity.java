@@ -42,7 +42,7 @@ public class CategoryActivity extends AppCompatActivity {
         open_face.setTypeface(custom);
         moto_cross.setTypeface(custom);
 
-        changeBackground();
+       // changeBackground();
 
 
 
@@ -52,16 +52,16 @@ public class CategoryActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //Drawable res=getResources().
                 // Toast.makeText(CategoryActivity.this,"clicked",Toast.LENGTH_LONG).show();
-                flip_uplayout.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_background));
+             //   flip_uplayout.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_background));
                 flip_up.setTextColor(Color.parseColor("#ff0000"));
 
-                full_face_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+               // full_face_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
                 full_face.setTextColor(Color.parseColor("#ffffff"));
 
-                open_face_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+                //open_face_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
                 open_face.setTextColor(Color.parseColor("#ffffff"));
 
-                moto_cross_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+                //moto_cross_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
                 moto_cross.setTextColor(Color.parseColor("#ffffff"));
 
                 Intent open=new Intent(CategoryActivity.this,FlipCategory.class);
@@ -73,16 +73,16 @@ public class CategoryActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //Drawable res=getResources().
                 // Toast.makeText(CategoryActivity.this,"clicked",Toast.LENGTH_LONG).show();
-                flip_uplayout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+               // flip_uplayout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
                 flip_up.setTextColor(Color.parseColor("#ffffff"));
 
-                full_face_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+                //full_face_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
                 full_face.setTextColor(Color.parseColor("#ffffff"));
 
-                open_face_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_background));
+                //open_face_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_background));
                 open_face.setTextColor(Color.parseColor("#ff0000"));
 
-                moto_cross_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+               // moto_cross_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
                 moto_cross.setTextColor(Color.parseColor("#ffffff"));
 
                 Intent open=new Intent(CategoryActivity.this,OpenFaceCategory.class);
@@ -95,16 +95,16 @@ public class CategoryActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //Drawable res=getResources().
                 // Toast.makeText(CategoryActivity.this,"clicked",Toast.LENGTH_LONG).show();
-                flip_uplayout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+                //flip_uplayout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
                 flip_up.setTextColor(Color.parseColor("#ffffff"));
 
-                full_face_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_background));
+                //full_face_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_background));
                 full_face.setTextColor(Color.parseColor("#ff0000"));
 
-                open_face_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+                //open_face_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
                 open_face.setTextColor(Color.parseColor("#ffffff"));
 
-                moto_cross_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+                //moto_cross_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
                 moto_cross.setTextColor(Color.parseColor("#ffffff"));
 
                 Intent open=new Intent(CategoryActivity.this,FullFaceCategory.class);
@@ -118,16 +118,16 @@ public class CategoryActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //Drawable res=getResources().
                 // Toast.makeText(CategoryActivity.this,"clicked",Toast.LENGTH_LONG).show();
-                flip_uplayout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+               // flip_uplayout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
                 flip_up.setTextColor(Color.parseColor("#ffffff"));
 
-                full_face_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+                //full_face_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
                 full_face.setTextColor(Color.parseColor("#ffffff"));
 
-                open_face_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+                //open_face_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
                 open_face.setTextColor(Color.parseColor("#ffffff"));
 
-                moto_cross_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_background));
+                //moto_cross_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_background));
                 moto_cross.setTextColor(Color.parseColor("#ff0000"));
 
                 Intent open=new Intent(CategoryActivity.this,MotoCrossCategory.class);
