@@ -30,15 +30,15 @@ public class FlipCategory extends AppCompatActivity {
         Typeface custom= Typeface.createFromAsset(getAssets(), "fonts/gillsanssemibold.ttf");
         dreamcategory.setTypeface(custom);
 
-        dream=(RelativeLayout)findViewById(R.id.dream);
+      //  dream=(RelativeLayout)findViewById(R.id.dream);
 
 
 
-        dream.setOnClickListener(new View.OnClickListener() {
+        dreamcategory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                dream.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_background));
+        //        dream.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_background));
                 dreamcategory.setTextColor(Color.parseColor("#ff0000"));
 
 
