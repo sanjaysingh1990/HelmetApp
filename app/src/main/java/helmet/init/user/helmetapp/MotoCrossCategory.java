@@ -34,7 +34,7 @@ public class MotoCrossCategory extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                dream.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_background));
+//                dream.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_background));
                 dreamcategory.setTextColor(Color.parseColor("#ff0000"));
 
 

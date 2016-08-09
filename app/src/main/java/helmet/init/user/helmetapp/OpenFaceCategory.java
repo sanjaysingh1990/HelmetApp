@@ -61,28 +61,28 @@ public class OpenFaceCategory extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 host.setTextColor(Color.parseColor("#ff0000"));
-                host_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_background));
+              //  host_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_background));
 
                 z_way.setTextColor(Color.parseColor("#ffffff"));
-                z_way_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+                //z_way_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 z_way_super.setTextColor(Color.parseColor("#ffffff"));
-                z_way_super_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+                //z_way_super_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 essex_hit.setTextColor(Color.parseColor("#ffffff"));
-                essex_hit_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+                //essex_hit_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 essex_hot.setTextColor(Color.parseColor("#ffffff"));
-                essex_hot_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+//                essex_hot_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 essex_wave.setTextColor(Color.parseColor("#ffffff"));
-                essex_wave_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+  //              essex_wave_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 youth.setTextColor(Color.parseColor("#ffffff"));
-                youth_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+//                youth_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 storm.setTextColor(Color.parseColor("#ffffff"));
-                storm_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+  //              storm_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
 
 
@@ -98,28 +98,28 @@ public class OpenFaceCategory extends AppCompatActivity {
             public void onClick(View view) {
                // Toast.makeText(OpenFaceCategory.this,"clicked z_way",Toast.LENGTH_LONG).show();
                 z_way.setTextColor(Color.parseColor("#ff0000"));
-                z_way_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_background));
+//                z_way_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_background));
 
                 host.setTextColor(Color.parseColor("#ffffff"));
-                host_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+  //              host_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 z_way_super.setTextColor(Color.parseColor("#ffffff"));
-                z_way_super_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+//                z_way_super_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 essex_hit.setTextColor(Color.parseColor("#ffffff"));
-                essex_hit_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+  //              essex_hit_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 essex_hot.setTextColor(Color.parseColor("#ffffff"));
-                essex_hot_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+    //            essex_hot_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 essex_wave.setTextColor(Color.parseColor("#ffffff"));
-                essex_wave_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+      //          essex_wave_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 youth.setTextColor(Color.parseColor("#ffffff"));
-                youth_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+        //        youth_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 storm.setTextColor(Color.parseColor("#ffffff"));
-                storm_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+          //      storm_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
 
 
@@ -137,31 +137,31 @@ public class OpenFaceCategory extends AppCompatActivity {
 //                Toast.makeText(OpenFaceCategory.this,"clicked",Toast.LENGTH_LONG).show();
 
                 z_way_super.setTextColor(Color.parseColor("#ff0000"));
-                z_way_super_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_background));
+//                z_way_super_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_background));
 
                 host.setTextColor(Color.parseColor("#ffffff"));
-                host_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+  //              host_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 z_way.setTextColor(Color.parseColor("#ffffff"));
-                z_way_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+    //            z_way_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 essex_hit.setTextColor(Color.parseColor("#ffffff"));
-                essex_hit_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+     //           essex_hit_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 essex_hot.setTextColor(Color.parseColor("#ffffff"));
-                essex_hot_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+      //          essex_hot_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 essex_hit.setTextColor(Color.parseColor("#ffffff"));
-                essex_hit_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+      //          essex_hit_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 essex_wave.setTextColor(Color.parseColor("#ffffff"));
-                essex_wave_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+        //        essex_wave_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 youth.setTextColor(Color.parseColor("#ffffff"));
-                youth_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+          //      youth_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 storm.setTextColor(Color.parseColor("#ffffff"));
-                storm_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+//                storm_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 Intent act=new Intent(OpenFaceCategory.this,TabActivity.class);
                 act.putExtra("category",7);
@@ -173,28 +173,28 @@ public class OpenFaceCategory extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 essex_hit.setTextColor(Color.parseColor("#ff0000"));
-                essex_hit_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_background));
+  //              essex_hit_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_background));
 
                 z_way.setTextColor(Color.parseColor("#ffffff"));
-                z_way_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+    //            z_way_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 z_way_super.setTextColor(Color.parseColor("#ffffff"));
-                z_way_super_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+      //          z_way_super_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 host.setTextColor(Color.parseColor("#ffffff"));
-                host_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+        //        host_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 essex_hot.setTextColor(Color.parseColor("#ffffff"));
-                essex_hot_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+          //      essex_hot_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 essex_wave.setTextColor(Color.parseColor("#ffffff"));
-                essex_wave_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+            //    essex_wave_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 youth.setTextColor(Color.parseColor("#ffffff"));
-                youth_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+             //   youth_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 storm.setTextColor(Color.parseColor("#ffffff"));
-                storm_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+             //   storm_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
 
 
@@ -209,28 +209,28 @@ public class OpenFaceCategory extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 essex_hot.setTextColor(Color.parseColor("#ff0000"));
-                essex_hot_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_background));
+//                essex_hot_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_background));
 
                 z_way.setTextColor(Color.parseColor("#ffffff"));
-                z_way_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+  //              z_way_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 z_way_super.setTextColor(Color.parseColor("#ffffff"));
-                z_way_super_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+    //            z_way_super_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 essex_hit.setTextColor(Color.parseColor("#ffffff"));
-                essex_hit_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+      //          essex_hit_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 host.setTextColor(Color.parseColor("#ffffff"));
-                host_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+     //           host_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 essex_wave.setTextColor(Color.parseColor("#ffffff"));
-                essex_wave_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+      //          essex_wave_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 youth.setTextColor(Color.parseColor("#ffffff"));
-                youth_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+       //         youth_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 storm.setTextColor(Color.parseColor("#ffffff"));
-                storm_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+         //       storm_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
 
 
@@ -245,28 +245,28 @@ public class OpenFaceCategory extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 essex_wave.setTextColor(Color.parseColor("#ff0000"));
-                essex_wave_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_background));
+//                essex_wave_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_background));
 
                 z_way.setTextColor(Color.parseColor("#ffffff"));
-                z_way_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+  //              z_way_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 z_way_super.setTextColor(Color.parseColor("#ffffff"));
-                z_way_super_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+   //             z_way_super_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 essex_hit.setTextColor(Color.parseColor("#ffffff"));
-                essex_hit_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+     //           essex_hit_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 essex_hot.setTextColor(Color.parseColor("#ffffff"));
-                essex_hot_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+      //          essex_hot_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 host.setTextColor(Color.parseColor("#ffffff"));
-                host_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+//                host_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 youth.setTextColor(Color.parseColor("#ffffff"));
-                youth_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+  //              youth_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 storm.setTextColor(Color.parseColor("#ffffff"));
-                storm_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+//                storm_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
 
 
@@ -281,28 +281,28 @@ public class OpenFaceCategory extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 youth.setTextColor(Color.parseColor("#ff0000"));
-                youth_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_background));
+             //   youth_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_background));
 
                 z_way.setTextColor(Color.parseColor("#ffffff"));
-                z_way_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+               // z_way_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 z_way_super.setTextColor(Color.parseColor("#ffffff"));
-                z_way_super_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+               // z_way_super_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 essex_hit.setTextColor(Color.parseColor("#ffffff"));
-                essex_hit_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+               // essex_hit_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 essex_hot.setTextColor(Color.parseColor("#ffffff"));
-                essex_hot_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+                //essex_hot_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 essex_wave.setTextColor(Color.parseColor("#ffffff"));
-                essex_wave_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+                //essex_wave_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 host.setTextColor(Color.parseColor("#ffffff"));
-                host_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+                //host_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 storm.setTextColor(Color.parseColor("#ffffff"));
-                storm_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+               // storm_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
 
 
@@ -317,28 +317,28 @@ public class OpenFaceCategory extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 storm.setTextColor(Color.parseColor("#ff0000"));
-                storm_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_background));
+              //  storm_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_background));
 
                 z_way.setTextColor(Color.parseColor("#ffffff"));
-                z_way_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+                //z_way_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 z_way_super.setTextColor(Color.parseColor("#ffffff"));
-                z_way_super_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+                //z_way_super_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 essex_hit.setTextColor(Color.parseColor("#ffffff"));
-                essex_hit_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+                //essex_hit_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 essex_hot.setTextColor(Color.parseColor("#ffffff"));
-                essex_hot_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+                //essex_hot_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 essex_wave.setTextColor(Color.parseColor("#ffffff"));
-                essex_wave_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+                //essex_wave_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 youth.setTextColor(Color.parseColor("#ffffff"));
-                youth_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+              //  youth_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
                 host.setTextColor(Color.parseColor("#ffffff"));
-                host_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
+                //host_layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.white_background));
 
 
 
