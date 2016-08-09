@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    >
+
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="100dp"
+    >
 
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
    android:orientation="vertical"
-    android:background="@drawable/background"
+
     tools:context="helmet.init.user.helmetapp.LocateActivity">
 
 
-    <FrameLayout
+   <!-- <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/gray"
@@ -27,14 +37,21 @@
             android:padding="10dp"
             />
 </FrameLayout>
+-->
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:src="@drawable/map"
-        android:scaleType="center"
-        />
 
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.MapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+
+    </RelativeLayout>
 <TextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -52,6 +69,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:layout_marginTop="10dp"
+
     >
 
     <LinearLayout
@@ -204,3 +222,5 @@ android:background="@android:drawable/picture_frame"
 
 </LinearLayout>
 </ScrollView>
+
+</LinearLayout>
