@@ -32,11 +32,12 @@
             <ImageButton
                 android:id="@+id/ibtn_close"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_gravity="center_vertical|bottom"
                 android:layout_weight="0"
+                android:layout_marginLeft="5dp"
                 android:background="?attr/selectableItemBackground"
-                android:src="@drawable/cancel_action" />
+                android:src="@drawable/close" />
 
 
             <ImageView
@@ -248,14 +249,14 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:layout_marginRight="20dp"
+                android:layout_marginRight="10dp"
                 >
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:src="@drawable/download_white" />
+                    android:src="@drawable/save_image" />
 
                 <ImageView
                     android:layout_width="wrap_content"
