@@ -7,6 +7,7 @@ import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
 import android.hardware.Camera;
 import android.media.AudioManager;
 import android.media.CamcorderProfile;
@@ -39,7 +40,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -47,6 +47,8 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+
+import helmet.fithelmet.SingleFingerView;
 
 
 public class CameraPreviewFragment extends Fragment
@@ -74,7 +76,7 @@ public class CameraPreviewFragment extends Fragment
     public ImageView gallery;
     private Bitmap capturedImage;
     private static ImageButton camera_flash;
-   public static int GALLERY_INTENT_CALLED = 200;
+    public static int GALLERY_INTENT_CALLED = 200;
     SoundPool soundPool;
     int shutterSound;
     /**
@@ -84,12 +86,16 @@ public class CameraPreviewFragment extends Fragment
     private static ImageButton mIbtnTakePhotoOrRecordVideo;
     private static TextView mTvElapseTime;
     private ImageButton done;
-     public static int flashMode;
+    public static int flashMode;
     public static File pictureFile = null;
     public static byte[] imgdata;
-    File capturedImageFile=null;
+    File capturedImageFile = null;
     private FrameLayout setframe;
     private ImageView selectedimage;
+    private LinearLayout bottom;
+    private SingleFingerView singleFingerView;
+    private ImageView helfront, helside, helback;
+    private RelativeLayout topheader;
     /**
      * Others section
      */
@@ -448,8 +454,10 @@ public class CameraPreviewFragment extends Fragment
             // Close current activity
             CameraReviewFragment.urls.clear();
             setframe.setVisibility(View.GONE);
+            bottom.setVisibility(View.GONE);
+            topheader.setVisibility(View.GONE);
 
-           } else if (view.getId() == R.id.ibtn_take_photo_or_record_video) {
+        } else if (view.getId() == R.id.ibtn_take_photo_or_record_video) {
             /**
              * Need check currently user choose Take Photo mode or Record Video mode.
              * Depend on which mode, use Action
@@ -551,7 +559,49 @@ public class CameraPreviewFragment extends Fragment
             // Create our Preview view and set it as the content of our activity.
             mCameraPreview = new CustomCameraPreview(getActivity(), CustomCamera.mCamera);
             mFlCameraPreview.addView(mCameraPreview);
+        } else if (view.getId() == R.id.helfront) {
+            singleFingerView.change(R.mipmap.helmet_front);
+        } else if (view.getId() == R.id.helside) {
+            singleFingerView.change(R.mipmap.helmet_side);
+        } else if (view.getId() == R.id.helback) {
+            singleFingerView.change(R.mipmap.helmet_back);
+        } else if (view.getId() == R.id.share) {
+            viewToBitmap();
         }
+
+    }
+
+    public void viewToBitmap() {
+        singleFingerView.hide();
+        setframe.setDrawingCacheEnabled(true);
+        setframe.buildDrawingCache();
+        Bitmap cache = setframe.getDrawingCache();
+        try {
+            final File capturedImageFile = new File(getTempDirectoryPath(), "replay" + System.currentTimeMillis() + ".jpg");
+            cache.compress(Bitmap.CompressFormat.JPEG, 100, new FileOutputStream(capturedImageFile));
+            String path = capturedImageFile.getAbsolutePath().toString();
+            Log.e("path", path);
+
+            //share image
+            Intent share = new Intent(Intent.ACTION_SEND);
+            // Type of file to share
+            share.setType("image/jpeg");
+            // Locate the image to Share
+            Uri uri = Uri.fromFile(capturedImageFile);
+            // Pass the image into an Intnet
+            share.putExtra(Intent.EXTRA_STREAM, uri);
+
+            // Show the social share chooser list
+            startActivity(Intent.createChooser(share, "Share Image Tutorial"));
+        } catch (Exception e) {
+            Log.e("error", e.getMessage());
+        } finally {
+            setframe.destroyDrawingCache();
+            Toast.makeText(getActivity(), "image saved", Toast.LENGTH_LONG).show();
+        }
+        singleFingerView.show();
+
+
     }
 
     @Override
@@ -615,11 +665,11 @@ public class CameraPreviewFragment extends Fragment
             // Hide switch camera button
             mIbtnSwitchFrontOrBackCamera.setVisibility(View.INVISIBLE);
         //to check flash availabe or not
-       Camera.Parameters parameters = CustomCamera.mCamera.getParameters();
+        Camera.Parameters parameters = CustomCamera.mCamera.getParameters();
         List<String> flashModes = parameters.getSupportedFlashModes();
 //        Toast.makeText(getActivity(),flashModes.size()+"",Toast.LENGTH_SHORT).show();
         if (flashModes != null) {
-           // parameters.setFlashMode(mFlashMode);
+            // parameters.setFlashMode(mFlashMode);
             parameters.setFlashMode(Camera.Parameters.FLASH_MODE_ON);
             camera_flash.setVisibility(View.VISIBLE);
         } else {
@@ -657,12 +707,26 @@ public class CameraPreviewFragment extends Fragment
         mIbtnTakePhotoOrRecordVideo.setOnClickListener(this);
     }
 
+    ImageView share;
+
     private void initialViews(View v) {
+        singleFingerView = (SingleFingerView) v.findViewById(R.id.tiv);
+        helfront = (ImageView) v.findViewById(R.id.helfront);
+        helside = (ImageView) v.findViewById(R.id.helside);
+        helback = (ImageView) v.findViewById(R.id.helback);
+        share = (ImageView) v.findViewById(R.id.share);
+
         mFlCameraPreview = (FrameLayout) v.findViewById(R.id.fl_camera_preview);
-        setframe= (FrameLayout) v.findViewById(R.id.setframe);
-        selectedimage= (ImageView) v.findViewById(R.id.image);
+        setframe = (FrameLayout) v.findViewById(R.id.setframe);
+        topheader = (RelativeLayout) v.findViewById(R.id.topheader);
+        bottom = (LinearLayout) v.findViewById(R.id.bottom);
+
+        selectedimage = (ImageView) v.findViewById(R.id.image);
         mIbtnClose = (ImageButton) v.findViewById(R.id.ibtn_close);
         setframe.setVisibility(View.GONE);
+        bottom.setVisibility(View.GONE);
+        topheader.setVisibility(View.GONE);
+
         mIbtnSwitchFrontOrBackCamera = (ImageButton) v.findViewById(
                 R.id.ibtn_switch_back_or_front_camera);
         mIbtnSwitchTakePhotoOrRecordVideo = (ImageButton) v.findViewById(
@@ -675,6 +739,11 @@ public class CameraPreviewFragment extends Fragment
                 R.id.tv_elapse_time);
 
 
+//add listener
+        helfront.setOnClickListener(this);
+        helside.setOnClickListener(this);
+        helback.setOnClickListener(this);
+        share.setOnClickListener(this);
 
 
         //getting height
@@ -829,7 +898,7 @@ public class CameraPreviewFragment extends Fragment
             mLpTakePhotoOrRecordVideo.gravity = Gravity.TOP;*/
 
             // Set params
-             //  mFlTakePhotoOrRecordVideo.setLayoutParams(mLpTakePhotoOrRecordVideo);
+            //  mFlTakePhotoOrRecordVideo.setLayoutParams(mLpTakePhotoOrRecordVideo);
 
             // The bar for cropping
             top_bar = height_bar;
@@ -928,7 +997,6 @@ public class CameraPreviewFragment extends Fragment
     class CompressGalleryPic extends AsyncTask<String, Void, Bitmap> {
 
 
-
         @Override
         protected Bitmap doInBackground(String... urls) {
             try {
@@ -937,7 +1005,7 @@ public class CameraPreviewFragment extends Fragment
                 bm.compress(Bitmap.CompressFormat.JPEG, 100, new FileOutputStream(capturedImageFile));
                 final String url = capturedImageFile.getAbsolutePath().toString();
                 CameraReviewFragment.urls.clear();
-                CameraData cd=new CameraData();
+                CameraData cd = new CameraData();
                 cd.setFilename("lnd" + System.currentTimeMillis() + ".jpg");
                 cd.setImageurl(url);
                 CameraReviewFragment.urls.put("1", cd);
@@ -997,6 +1065,9 @@ public class CameraPreviewFragment extends Fragment
     private void setImage(Bitmap capturedImage) {
 
         setframe.setVisibility(View.VISIBLE);
+        bottom.setVisibility(View.VISIBLE);
+        topheader.setVisibility(View.VISIBLE);
+        singleFingerView.change(R.mipmap.helmet_front);
         selectedimage.setImageBitmap(capturedImage);
     }
 
@@ -1057,12 +1128,14 @@ public class CameraPreviewFragment extends Fragment
                 capturedImageFile = new File(getTempDirectoryPath(), System.currentTimeMillis() + ".jpg");
                 Bitmap bm = CompressImage.compressImage(imgDecodableString);
                 setframe.setVisibility(View.VISIBLE);
+                bottom.setVisibility(View.VISIBLE);
+                topheader.setVisibility(View.VISIBLE);
                 selectedimage.setImageBitmap(bm);
                 //bm.compress(Bitmap.CompressFormat.JPEG, 100, new FileOutputStream(capturedImageFile));
                 //imgDecodableString = capturedImageFile.getAbsolutePath().toString();
                 //  gallery.setImageBitmap(bm);
 
-              //      new CompressGalleryPic().execute(imgDecodableString);
+                //      new CompressGalleryPic().execute(imgDecodableString);
 
                 //firs t image
                 //ByteArrayOutputStream stream = new ByteArrayOutputStream();

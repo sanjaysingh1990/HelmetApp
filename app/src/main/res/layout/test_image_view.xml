@@ -15,7 +15,7 @@
         android:layout_marginLeft="20dp"
         android:focusableInTouchMode="true"
         android:clickable="true"
-        android:background="#ff0000"
+        android:background="@android:color/transparent"
         android:focusable="true"
         />
     />

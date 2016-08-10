@@ -149,4 +149,16 @@ public class SingleFingerView extends LinearLayout {
             setViewToAttr(width, height);
         }
     }
+    public void change(int id)
+    {
+     mView.setImageResource(id);
+    }
+    public void hide()
+    {
+        mPushView.setVisibility(View.GONE);
+    }
+    public void show()
+    {
+        mPushView.setVisibility(View.VISIBLE);
+    }
 }

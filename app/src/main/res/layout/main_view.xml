@@ -13,7 +13,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:background="@android:color/black"
-        android:src="@mipmap/bg"
+
         android:scaleType="centerCrop"
         />
 
@@ -23,7 +23,7 @@
         android:layout_height="fill_parent"
         android:layout_gravity="center_horizontal|top"
         pushtouch:centerInParent="true"
-        pushtouch:image="@mipmap/front_helmet"
+
         pushtouch:image_height="350dp"
         pushtouch:image_width="280dp"
         pushtouch:push_image="@mipmap/push_btn"

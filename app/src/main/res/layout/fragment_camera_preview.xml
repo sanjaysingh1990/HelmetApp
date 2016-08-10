@@ -42,9 +42,8 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:src="@drawable/logo"
                 android:layout_marginLeft="-30dp"
-                />
+                android:src="@drawable/logo" />
 
             <LinearLayout
                 android:id="@+id/ll_elapse_time"
@@ -88,6 +87,8 @@
                 android:background="?android:attr/selectableItemBackground"
                 android:src="@drawable/post_next"
                 android:visibility="gone" />
+
+
         </LinearLayout>
 
     </FrameLayout>
@@ -232,12 +233,41 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <View
+        <RelativeLayout
+            android:id="@+id/topheader"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_weight="0"
             android:background="@android:color/transparent"
-            android:clickable="false" />
+            android:clickable="false"
+
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/download_white" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/share_white"
+                    android:layout_marginLeft="15dp"
+                    android:id="@+id/share"
+                    android:clickable="true"
+                    />
+
+            </LinearLayout>
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -255,12 +285,14 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/bottom"
             android:layout_width="match_parent"
-            android:layout_height="85dp"
+            android:layout_height="94dp"
             android:layout_weight="0"
+            android:background="@android:color/black"
             android:clickable="false"
             android:orientation="horizontal"
-            android:background="@android:color/black"
+
             >
 
             <RelativeLayout
@@ -269,9 +301,25 @@
                 android:layout_weight="1">
 
                 <ImageView
+                    android:id="@+id/helfront"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:src="@drawable/one_helmet"
+                    android:clickable="true"
+                    android:src="@mipmap/helmet_front" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/helside"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:src="@mipmap/helmet_side"
+
                     />
             </RelativeLayout>
 
@@ -281,47 +329,13 @@
                 android:layout_weight="1">
 
                 <ImageView
+                    android:id="@+id/helback"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/two_helmet"
-
-                    />
+                    android:clickable="true"
+                    android:src="@mipmap/helmet_back" />
             </RelativeLayout>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/three_helmet"
-
-                    />
-            </RelativeLayout>
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_weight="0"
-    android:orientation="horizontal"
-    android:layout_gravity="center_vertical"
-    >
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/download_white"
-        android:layout_gravity="center"
-        />
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/share_white"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="10dp"
-        />
-
-</LinearLayout>
         </LinearLayout>
 
 
