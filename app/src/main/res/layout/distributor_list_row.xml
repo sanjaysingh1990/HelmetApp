@@ -61,6 +61,7 @@
         android:text="distance"
         android:textSize="16sp"
         android:textColor="#000"
+        android:paddingLeft="5dp"
         android:layout_gravity="center"
         android:id="@+id/distance"
         />
