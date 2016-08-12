@@ -59,8 +59,9 @@ public class DescriptionActivity extends AppCompatActivity {
         String image = getIntent().getStringExtra("helmet_image");
 
 
-
         getAvailableColors(helmet_id);
+
+
 
         Log.e("helmet_id",helmet_id);
 
@@ -68,7 +69,14 @@ public class DescriptionActivity extends AppCompatActivity {
         LinearLayoutManager manager=new LinearLayoutManager(DescriptionActivity.this,LinearLayoutManager.HORIZONTAL,false);
         imagesRecycler.setLayoutManager(manager);
 
+if(images!=null){
+    imgAdapter=new ImageAdapter(getApplicationContext(), images);
+     imagesRecycler.setAdapter(imgAdapter);
 
+}
+else
+
+    getAvailableColors(helmet_id);
 
 
         locate = (TextView) findViewById(R.id.locate);
@@ -139,7 +147,7 @@ public class DescriptionActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
 
-                           //Toast.makeText(DescriptionActivity.this,"get data"+response.toString(),Toast.LENGTH_LONG).show();
+                          // Toast.makeText(DescriptionActivity.this,"get data"+response.toString(),Toast.LENGTH_LONG).show();
                         try {
                             JSONObject jobj = new JSONObject(response.toString());
                             JSONArray jarray = jobj.getJSONArray("data");
@@ -152,7 +160,7 @@ public class DescriptionActivity extends AppCompatActivity {
                                 JSONObject jsonObject = jarray.getJSONObject(i);
 
                                 GalleryDataBean bean = new GalleryDataBean();
-                                bean.setImage(jsonObject.getString("image"));
+                                bean.setHelmet_image(jsonObject.getString("image"));
 
                                 images.add(bean);
 
@@ -161,9 +169,9 @@ public class DescriptionActivity extends AppCompatActivity {
 
                             //imgAdapter.notifyDataSetChanged();
                             Log.e("colors array", images.size()+"");
-                           // imgAdapter.notifyDataSetChanged();
-                            imgAdapter=new ImageAdapter(getApplicationContext(), images);
-                            imagesRecycler.setAdapter(imgAdapter);
+                            imgAdapter.notifyDataSetChanged();
+                           // imgAdapter=new ImageAdapter(getApplicationContext(), images);
+                           // imagesRecycler.setAdapter(imgAdapter);
 
                         } catch (Exception e) {
                             Log.e("exception", e.toString());

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:drawable/picture_frame"
+    android:paddingRight="20dp"
+    >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ABC Distributor"
+            android:textStyle="bold"
+            android:id="@+id/shopname"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shop No. 123,XYZ Bazar"
+            android:id="@+id/shopno"
+
+
+            />
+         <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+91-9876543210"
+    android:id="@+id/shopph"
+
+
+    />
+
+
+    </LinearLayout>
+<View
+    android:layout_width="4dp"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    />
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@android:color/white"
+
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="distance"
+        android:textSize="16sp"
+        android:textColor="#000"
+        android:layout_gravity="center"
+        android:id="@+id/distance"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="time"
+        android:textSize="16sp"
+        android:textColor="#000"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_gravity="center"
+        android:id="@+id/time"
+        />
+</LinearLayout>
+</LinearLayout>
