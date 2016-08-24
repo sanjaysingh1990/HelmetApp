@@ -6,21 +6,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="helmet.init.user.helmetapp.TabActivity"
     android:orientation="vertical"
+    android:background="@drawable/description_back"
     >
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/gray"
+
         >
         <ImageView
             android:layout_width="200dp"
             android:layout_height="80dp"
             android:src="@drawable/replay_text"
             android:layout_gravity="center"
-            android:background="@android:color/transparent"
-            android:padding="10dp"
+            android:layout_marginTop="5dp"
             />
-
     </FrameLayout>
     <TextView
         android:layout_width="wrap_content"
@@ -32,14 +31,59 @@
         android:visibility="gone"
         />
 
-    <android.support.design.widget.TabLayout
+  <!--  <android.support.design.widget.TabLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tablayout"
+        app:tabTextColor="#ffffff"
+        app:tabSelectedTextColor="#ffffff"
+        app:tabIndicatorColor="#8904B1"
+        app:tabIndicatorHeight="2dp"
+        android:elevation="2dp"
+        android:background="@drawable/one_border"
+
         >
 
 
     </android.support.design.widget.TabLayout>
+-->
+
+<!--<View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="#ffffff"
+    android:layout_marginTop="-4dp"
+    />
+-->
+
+    <com.ogaclejapan.smarttablayout.SmartTabLayout
+        android:id="@+id/viewpagertab"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/one_border"
+        app:stl_indicatorAlwaysInCenter="false"
+        app:stl_indicatorWithoutPadding="false"
+        app:stl_indicatorInFront="false"
+        app:stl_indicatorInterpolation="smart"
+        app:stl_indicatorGravity="bottom"
+        app:stl_indicatorColor="#8940ff"
+        app:stl_indicatorThickness="4dp"
+        app:stl_indicatorCornerRadius="2dp"
+        app:stl_overlineColor="#4D000000"
+        app:stl_overlineThickness="0dp"
+        app:stl_underlineColor="#FFF"
+        app:stl_underlineThickness="0dp"
+        app:stl_dividerColor="#FFF"
+        app:stl_dividerThickness="1dp"
+        app:stl_defaultTabBackground="?attr/selectableItemBackground"
+        app:stl_defaultTabTextAllCaps="true"
+        app:stl_defaultTabTextColor="#FFF"
+        app:stl_defaultTabTextSize="16sp"
+        app:stl_defaultTabTextHorizontalPadding="16dp"
+        app:stl_defaultTabTextMinWidth="0dp"
+        app:stl_distributeEvenly="true"
+        app:stl_clickable="true"
+        />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"

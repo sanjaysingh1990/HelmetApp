@@ -15,7 +15,7 @@ public class FullFaceCategory extends AppCompatActivity {
 
 
     RelativeLayout elex,leo,water;
-    TextView elexcategory,leocategory,watercategory;
+    TextView elexcategory,leocategory,watercategory,categoryname;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,12 @@ public class FullFaceCategory extends AppCompatActivity {
         leocategory=(TextView)findViewById(R.id.leocategory);
         watercategory=(TextView)findViewById(R.id.watercategory);
 
-        Typeface custom= Typeface.createFromAsset(getAssets(), "fonts/gillsanssemibold.ttf");
+        categoryname=(TextView)findViewById(R.id.categoryname);
+        Typeface custom1= Typeface.createFromAsset(getAssets(), "newfonts/GOTHICB_0.TTF");
+        categoryname.setTypeface(custom1);
+
+
+        Typeface custom= Typeface.createFromAsset(getAssets(), "newfonts/GOTHIC_0.TTF");
         elexcategory.setTypeface(custom);
         leocategory.setTypeface(custom);
         watercategory.setTypeface(custom);

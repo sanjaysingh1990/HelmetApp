@@ -32,13 +32,14 @@
         android:textSize="23sp"
         android:layout_marginTop="60dp"
         android:layout_gravity="center"
+        android:id="@+id/categoryname"
         />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="40dp"
 
         >
         <LinearLayout
@@ -50,18 +51,19 @@
 
             >
             <RelativeLayout
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:background="@drawable/square_background"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 android:id="@+id/hostlayout"
                 android:gravity="center">
 
 
 
                 <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/flip_up_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/flip_outer"
+                    android:background="@drawable/click_button"
+
 
                     />
             </RelativeLayout>
@@ -72,7 +74,7 @@
                 android:textColor="#fff"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:textSize="23.5sp"
+                android:textSize="15sp"
                 android:id="@+id/host"
                 />
 
@@ -88,18 +90,18 @@
             android:layout_marginRight="30dp"
             >
             <RelativeLayout
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:background="@drawable/square_background"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 android:id="@+id/z_way_layout"
                 android:gravity="center">
 
 
 
                 <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/leocategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/full_outer"
+                    android:background="@drawable/click_button"
 
                     />
             </RelativeLayout>
@@ -110,7 +112,7 @@
                 android:textColor="#fff"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:textSize="23.5sp"
+                android:textSize="15sp"
                 android:id="@+id/zway"
                 />
 
@@ -136,18 +138,18 @@
             android:layout_marginLeft="30dp"
             >
             <RelativeLayout
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:background="@drawable/square_background"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 android:id="@+id/z_way_super_layout"
                 android:gravity="center">
 
 
 
                 <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/open_face_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/flip_outer"
+                    android:background="@drawable/click_button"
 
                     />
             </RelativeLayout>
@@ -158,7 +160,7 @@
                 android:textColor="#fff"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:textSize="23.5sp"
+                android:textSize="15sp"
                 android:id="@+id/z_way_super"
 
                 />
@@ -175,18 +177,18 @@
             android:layout_marginRight="30dp"
             >
             <RelativeLayout
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:background="@drawable/square_background"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 android:id="@+id/essex_hit_layout"
                 android:gravity="center">
 
 
 
                 <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/moto_cross_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/full_outer"
+                    android:background="@drawable/click_button"
 
                     />
             </RelativeLayout>
@@ -197,7 +199,7 @@
                 android:textColor="#fff"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:textSize="23.5sp"
+                android:textSize="15sp"
                 android:id="@+id/essex_hit"
                 />
 
@@ -226,18 +228,18 @@
             android:layout_marginLeft="30dp"
             >
             <RelativeLayout
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:background="@drawable/square_background"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 android:id="@+id/essex_hot_layout"
                 android:gravity="center">
 
 
 
                 <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/open_face_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/flip_outer"
+                    android:background="@drawable/click_button"
 
                     />
             </RelativeLayout>
@@ -248,7 +250,7 @@
                 android:textColor="#fff"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:textSize="23.5sp"
+                android:textSize="15sp"
                 android:id="@+id/essex_hot"
 
                 />
@@ -265,18 +267,18 @@
             android:layout_marginRight="30dp"
             >
             <RelativeLayout
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:background="@drawable/square_background"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 android:id="@+id/essex_wave_layout"
                 android:gravity="center">
 
 
 
                 <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/moto_cross_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/full_outer"
+                    android:background="@drawable/click_button"
 
                     />
             </RelativeLayout>
@@ -287,7 +289,7 @@
                 android:textColor="#fff"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:textSize="23.5sp"
+                android:textSize="15sp"
                 android:id="@+id/essex_wave"
                 />
 
@@ -316,18 +318,18 @@
             android:layout_marginLeft="30dp"
             >
             <RelativeLayout
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:background="@drawable/square_background"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 android:id="@+id/youth_layout"
                 android:gravity="center">
 
 
 
                 <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/open_face_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/flip_outer"
+                    android:background="@drawable/click_button"
 
                     />
             </RelativeLayout>
@@ -338,7 +340,7 @@
                 android:textColor="#fff"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:textSize="23.5sp"
+                android:textSize="15sp"
                 android:id="@+id/youth"
 
                 />
@@ -355,18 +357,18 @@
             android:layout_marginRight="30dp"
             >
             <RelativeLayout
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:background="@drawable/square_background"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 android:id="@+id/storm_layout"
                 android:gravity="center">
 
 
 
                 <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/moto_cross_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/full_outer"
+                    android:background="@drawable/click_button"
 
                     />
             </RelativeLayout>
@@ -377,7 +379,7 @@
                 android:textColor="#fff"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:textSize="23.5sp"
+                android:textSize="15sp"
                 android:id="@+id/storm"
                 />
 

@@ -38,7 +38,7 @@ public class LocateActivity extends AppCompatActivity {
     TextView locateMap;
     private GoogleMap googleMap;
     RecyclerView addressRecycler,distancetimeRecycler;
-ArrayList<GalleryDataBean> distributor=new ArrayList<>();
+    ArrayList<GalleryDataBean> distributor=new ArrayList<>();
     RecyclerAdapter adapter;
     DistanceTimeAdapter adp;
 
@@ -50,7 +50,6 @@ ArrayList<GalleryDataBean> distributor=new ArrayList<>();
         setContentView(R.layout.activity_locate);
 
         getData();
-
         locateMap = (TextView) findViewById(R.id.locate);
         addressRecycler=(RecyclerView)findViewById(R.id.address);
 
@@ -59,10 +58,11 @@ ArrayList<GalleryDataBean> distributor=new ArrayList<>();
 
 
 
-        if(distributor!=null) {
+        if(distributor!=null)
+        {
             adapter = new RecyclerAdapter(distributor);
             addressRecycler.setAdapter(adapter);
- }
+        }
         else
         getData();
 
@@ -273,8 +273,6 @@ ArrayList<GalleryDataBean> distributor=new ArrayList<>();
 
                 distance1=(TextView)itemView.findViewById(R.id.distance);
                 time1=(TextView)itemView.findViewById(R.id.time);
-                //sstate=(TextView)itemView.findViewById(R.id.shopstate);
-               // sph=(TextView)itemView.findViewById(R.id.shopph);
 
 
             }

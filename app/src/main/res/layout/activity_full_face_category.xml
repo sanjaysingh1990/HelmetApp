@@ -28,8 +28,9 @@
         android:text="FULL FACE"
         android:textColor="#fff"
         android:textSize="23sp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:layout_gravity="center"
+        android:id="@+id/categoryname"
         />
 
     <RelativeLayout
@@ -48,18 +49,19 @@
 
             >
             <RelativeLayout
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:background="@drawable/square_background"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+
                 android:id="@+id/elex"
                 android:gravity="center">
 
 
 
                 <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/elexcategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/elex_outer"
+                    android:background="@drawable/click_button"
 
                     />
             </RelativeLayout>
@@ -69,7 +71,7 @@
                 android:text="Elex"
                 android:textColor="#fff"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="2dp"
                 android:textSize="18sp"
                 android:id="@+id/elexcategory"
                 />
@@ -86,18 +88,18 @@
             android:layout_marginRight="30dp"
             >
             <RelativeLayout
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:background="@drawable/square_background"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 android:id="@+id/leo"
                 android:gravity="center">
 
 
 
                 <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/leocategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/leo_outer"
+                    android:background="@drawable/click_button"
 
                     />
             </RelativeLayout>
@@ -107,7 +109,7 @@
                 android:text="Leo"
                 android:textColor="#fff"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="2dp"
                 android:textSize="18sp"
                 android:id="@+id/leocategory"
                 />
@@ -123,7 +125,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
 
         >
         <LinearLayout
@@ -134,18 +136,18 @@
             android:layout_marginLeft="30dp"
             >
             <RelativeLayout
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:background="@drawable/square_background"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 android:id="@+id/water"
                 android:gravity="center">
 
 
 
                 <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/watercategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/walter_outer"
+                    android:background="@drawable/click_button"
 
                     />
             </RelativeLayout>
@@ -155,7 +157,7 @@
                 android:text="Walter"
                 android:textColor="#fff"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="2dp"
                 android:textSize="18sp"
                 android:id="@+id/watercategory"
 

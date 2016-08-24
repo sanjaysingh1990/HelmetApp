@@ -14,7 +14,7 @@ public class MotoCrossCategory extends AppCompatActivity {
 
 
     RelativeLayout dream;
-    TextView dreamcategory;
+    TextView dreamcategory,categoryname;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +24,10 @@ public class MotoCrossCategory extends AppCompatActivity {
 
         setContentView(R.layout.activity_moto_cross);
         dreamcategory=(TextView)findViewById(R.id.dreamcategory);
+        categoryname=(TextView)findViewById(R.id.categoryname);
+        Typeface custom1= Typeface.createFromAsset(getAssets(), "newfonts/GOTHICB_0.TTF");
+        categoryname.setTypeface(custom1);
+
 
         Typeface custom= Typeface.createFromAsset(getAssets(), "fonts/gillsanssemibold.ttf");
         dreamcategory.setTypeface(custom);

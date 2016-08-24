@@ -159,7 +159,7 @@ adapter.notifyDataSetChanged();
                         }
                         catch (Exception e){
                             Log.e("exception",e.toString());
-                        }
+                           }
 
                     }
                 },
@@ -170,6 +170,8 @@ adapter.notifyDataSetChanged();
 
                         //Toast.makeText(getActivity(),error.getMessage(), Toast.LENGTH_LONG).show();
                         Log.e("error",error.toString());
+                        Toast.makeText(getContext(),"No internet.. Please try after sometime",Toast.LENGTH_LONG).show();
+
                     }
 
                 }) {

@@ -120,6 +120,8 @@ public class TwoFragment extends Fragment {
 
                         //Toast.makeText(getActivity(),error.getMessage(), Toast.LENGTH_LONG).show();
                         Log.e("error",error.toString());
+                        Toast.makeText(getContext(),"No internet.. Please try after sometime",Toast.LENGTH_LONG).show();
+
                     }
 
                 }) {

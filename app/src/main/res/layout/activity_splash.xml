@@ -8,7 +8,7 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
 
     android:orientation="vertical"
- 
+   android:background="@drawable/sp"
     >
 
  <!--<android.support.v4.view.ViewPager
@@ -39,7 +39,8 @@
         android:layout_gravity="center|bottom"
 
         />
+ <include layout="@layout/banner"/>
+
 -->
 
- <include layout="@layout/banner"/>
 </LinearLayout>

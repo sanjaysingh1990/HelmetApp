@@ -14,7 +14,7 @@ public class FlipCategory extends AppCompatActivity {
 
 
     RelativeLayout dream;
-    TextView dreamcategory;
+    TextView dreamcategory,categoryname;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +24,7 @@ public class FlipCategory extends AppCompatActivity {
         setContentView(R.layout.activity_flip_category);
 
         dreamcategory=(TextView)findViewById(R.id.dreamcategory);
+
 
 
        // changeBackgound();

@@ -90,17 +90,25 @@ else
 
         helmetimg = (ImageView) findViewById(R.id.helmetimage);
 
-        Typeface custom = Typeface.createFromAsset(getAssets(), "fonts/gillsanssemibolditalic.ttf");
+        Typeface custom = Typeface.createFromAsset(getAssets(), "newfonts/GOTHICB_0.TTF");
         helmetname.setTypeface(custom);
-
-        Typeface name1font = Typeface.createFromAsset(getAssets(), "fonts/gillsans-light-italic.ttf");
-        name1.setTypeface(custom);
-        locate.setTypeface(custom);
         availablecolors.setTypeface(custom);
         features.setTypeface(custom);
         tryit.setTypeface(custom);
 
-        Typeface descfont = Typeface.createFromAsset(getAssets(), "fonts/gillsans.ttf");
+
+        Typeface custom1 = Typeface.createFromAsset(getAssets(), "newfonts/GOTHIC_0.TTF");
+        name1.setTypeface(custom1);
+        locate.setTypeface(custom1);
+
+        Typeface name1font = Typeface.createFromAsset(getAssets(), "newfonts/GOTHICB_0.TTF");
+       // name1.setTypeface(custom);
+       // locate.setTypeface(custom);
+        availablecolors.setTypeface(custom);
+        features.setTypeface(custom);
+        tryit.setTypeface(custom);
+
+        Typeface descfont = Typeface.createFromAsset(getAssets(), "newfonts/GOTHIC_0.TTF");
         desc1.setTypeface(descfont);
         desc2.setTypeface(descfont);
 

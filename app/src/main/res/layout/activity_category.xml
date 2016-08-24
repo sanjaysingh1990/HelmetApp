@@ -1,17 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-
-<LinearLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#3a3b3e"
+
+    >
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/helmet_bak"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        />
+
+</RelativeLayout>
+
+<LinearLayout
+   
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     tools:context=".CategoryActivity"
-    android:background="@drawable/background"
     android:orientation="vertical"
+    android:background="#953a3b3e"
 
 
     >
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:src="@drawable/replay_text"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        />
 
     <!--<ImageView
         android:layout_width="200dp"
@@ -25,7 +55,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="40dp"
 
         >
        <LinearLayout
@@ -33,22 +63,25 @@
            android:layout_height="wrap_content"
            android:orientation="vertical"
            android:layout_alignParentLeft="true"
-           android:layout_marginLeft="30dp"
+           android:layout_marginLeft="10dp"
 
            >
         <RelativeLayout
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:background="@drawable/square_background"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
             android:id="@+id/flipuplayout"
-            android:gravity="center">
+            android:gravity="center"
+
+            >
 
 
 
             <ImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:src="@drawable/flip_up_category"
+                android:id="@+id/flip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/flip_outer"
+                android:background="@drawable/click_button"
 
                 />
         </RelativeLayout>
@@ -59,7 +92,7 @@
     android:textColor="#fff"
     android:layout_gravity="center"
     android:layout_marginTop="10dp"
-    android:textSize="23.5sp"
+    android:textSize="15sp"
     android:id="@+id/flip_up"
     />
 
@@ -72,21 +105,21 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="30dp"
+            android:layout_marginRight="10dp"
             >
             <RelativeLayout
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:background="@drawable/square_background"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
                 android:id="@+id/full_face_layout"
                 android:gravity="center">
 
 
 
                 <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/leocategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/full_outer"
+                    android:background="@drawable/click_button"
 
                     />
             </RelativeLayout>
@@ -97,7 +130,7 @@
                 android:textColor="#fff"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:textSize="23.5sp"
+                android:textSize="15sp"
                 android:id="@+id/full_face"
                 />
 
@@ -120,21 +153,21 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_alignParentLeft="true"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="10dp"
             >
             <RelativeLayout
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:background="@drawable/square_background"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 android:id="@+id/open_face_layout"
                 android:gravity="center">
 
 
 
                 <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/open_face_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/open_outer"
+                    android:background="@drawable/click_button"
 
                     />
             </RelativeLayout>
@@ -145,7 +178,7 @@
                 android:textColor="#fff"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:textSize="23.5sp"
+                android:textSize="15sp"
                 android:id="@+id/open_face"
 
                 />
@@ -159,21 +192,21 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="30dp"
+            android:layout_marginRight="10dp"
             >
             <RelativeLayout
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:background="@drawable/square_background"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 android:id="@+id/moto_cross_layout"
                 android:gravity="center">
 
 
 
                 <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/moto_cross_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/moto_outer"
+                    android:background="@drawable/click_button"
 
                     />
             </RelativeLayout>
@@ -184,7 +217,7 @@
                 android:textColor="#fff"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:textSize="23.5sp"
+                android:textSize="15sp"
                 android:id="@+id/moto_cross"
                 />
 
@@ -195,3 +228,4 @@
     </RelativeLayout>
 
 </LinearLayout>
+</FrameLayout>

@@ -60,7 +60,7 @@ public class Splash extends AppCompatActivity {
 
 
 
-        im.add(R.drawable.splash);
+        /*im.add(R.drawable.splash);
         im.add(R.drawable.splash2);
 
 
@@ -99,7 +99,7 @@ public class Splash extends AppCompatActivity {
 
             }
         });
-
+*/
         Thread th = new Thread(new Runnable() {
             @Override
             public void run() {

@@ -162,6 +162,7 @@ adapter.notifyDataSetChanged();
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         prog.setVisibility(View.GONE);
+                        Toast.makeText(getContext(),"No internet.. Please try after sometime",Toast.LENGTH_LONG).show();
 
                         //Toast.makeText(getActivity(),error.getMessage(), Toast.LENGTH_LONG).show();
                         Log.e("error",error.toString());

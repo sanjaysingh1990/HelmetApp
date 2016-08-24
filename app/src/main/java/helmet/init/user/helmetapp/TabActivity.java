@@ -1,5 +1,6 @@
 package helmet.init.user.helmetapp;
 
+import android.graphics.Color;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -7,7 +8,13 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.WindowManager;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import com.ogaclejapan.smarttablayout.SmartTabLayout;
 
 import java.util.ArrayList;
 
@@ -15,6 +22,7 @@ public class TabActivity extends AppCompatActivity {
 
     TabLayout tabs;
     ViewPager pager;
+    SmartTabLayout tabLayout;
 
 
     @Override
@@ -67,9 +75,26 @@ int categoryno=getIntent().getIntExtra("category",1);
         else
         setupViewPager(pager);
 
-        tabs=(TabLayout)findViewById(R.id.tablayout);
-        tabs.setupWithViewPager(pager);
+//        tabs=(TabLayout)findViewById(R.id.tablayout);
+  //      tabs.setupWithViewPager(pager);
+        //tabs.setSelectedTabIndicatorColor(Color.parseColor("#8904B1"));
 
+    /*    for (int i = 0; i <tabs.getTabCount()-1; i++) {
+            TabLayout.Tab tab = tabs.getTabAt(i);
+            LinearLayout relativeLayout = (LinearLayout)
+                    LayoutInflater.from(this).inflate(R.layout.tab_layout, tabs, false);
+
+            TextView tabTextView = (TextView) relativeLayout.findViewById(R.id.tab_title);
+            tabTextView.setText(tab.getText());
+            tab.setCustomView(relativeLayout);
+
+           // tab.select();
+        }
+*/
+
+
+        SmartTabLayout viewPagerTab = (SmartTabLayout) findViewById(R.id.viewpagertab);
+        viewPagerTab.setViewPager(pager);
 
 
     }

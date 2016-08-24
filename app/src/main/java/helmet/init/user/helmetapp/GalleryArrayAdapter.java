@@ -58,7 +58,7 @@ public class GalleryArrayAdapter extends RecyclerView.Adapter<GalleryArrayAdapte
     public void onBindViewHolder(final ViewHolder viewHolder, int i) {
       nature= mItems.get(i);
 
-        Typeface custom =Typeface.createFromAsset(con.getAssets(), "fonts/gillsanssemibolditalic.ttf");
+        Typeface custom =Typeface.createFromAsset(con.getAssets(), "newfonts/GOTHIC_0.TTF");
         viewHolder.name.setTypeface(custom);
 
  /*    viewHolder.imgThumbnail.setImageUrl(nature.getHelmet_image(),imageLoader,new SimpleImageLoadingListener() {

@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 public class OpenFaceCategory extends AppCompatActivity {
 
-    TextView host,z_way,z_way_super,essex_hit,essex_hot,essex_wave,youth,storm;
+    TextView host,z_way,z_way_super,essex_hit,essex_hot,essex_wave,youth,storm,categoryname;
     RelativeLayout host_layout,z_way_layout,z_way_super_layout,essex_hit_layout,essex_hot_layout,essex_wave_layout,youth_layout,storm_layout;
 
 
@@ -44,10 +44,13 @@ public class OpenFaceCategory extends AppCompatActivity {
         youth_layout=(RelativeLayout)findViewById(R.id.youth_layout);
         storm_layout=(RelativeLayout)findViewById(R.id.storm_layout);
 
+        categoryname=(TextView)findViewById(R.id.categoryname);
+        Typeface custom1= Typeface.createFromAsset(getAssets(), "newfonts/GOTHICB_0.TTF");
+        categoryname.setTypeface(custom1);
 
 
 
-        Typeface custom= Typeface.createFromAsset(getAssets(), "fonts/gillsanssemibold.ttf");
+        Typeface custom= Typeface.createFromAsset(getAssets(), "newfonts/GOTHIC_0.TTF");
         host.setTypeface(custom);
         z_way.setTypeface(custom);
         z_way_super.setTypeface(custom);

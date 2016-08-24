@@ -1,13 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
-<LinearLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#3a3b3e"
+
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/helmet_bak"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            />
+
+    </RelativeLayout>
+
+
+<LinearLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     tools:context=".CategoryActivity"
-    android:background="@drawable/background1"
+   android:background="#953a3b3e"
     android:orientation="vertical"
 
 
@@ -99,3 +121,4 @@
     </RelativeLayout>
 
 </LinearLayout>
+</FrameLayout>
