@@ -115,7 +115,7 @@ else
 
 
 
-
+        helmetname.setText(helmet_name);
         name1.setText(helmet_name);
 
         desc1.setText(feature);

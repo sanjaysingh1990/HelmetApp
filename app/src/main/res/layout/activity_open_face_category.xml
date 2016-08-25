@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
->
+
+    >
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -39,7 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
 
         >
         <LinearLayout
@@ -66,17 +67,20 @@
 
 
                     />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Host"
+                    android:textColor="#fff"
+                    android:layout_marginTop="10dp"
+                    android:textSize="15sp"
+                    android:id="@+id/host"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+
+                    />
             </RelativeLayout>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Host"
-                android:textColor="#fff"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:textSize="15sp"
-                android:id="@+id/host"
-                />
+
 
 
         </LinearLayout>
@@ -104,17 +108,20 @@
                     android:background="@drawable/click_button"
 
                     />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Z-way"
+                    android:textColor="#fff"
+                    android:layout_marginTop="10dp"
+                    android:textSize="15sp"
+                    android:id="@+id/zway"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    />
+
             </RelativeLayout>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Z-way"
-                android:textColor="#fff"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:textSize="15sp"
-                android:id="@+id/zway"
-                />
 
 
         </LinearLayout>
@@ -127,7 +134,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
 
         >
         <LinearLayout
@@ -152,18 +159,19 @@
                     android:background="@drawable/click_button"
 
                     />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Z-way Super"
+                    android:textColor="#fff"
+                    android:layout_marginTop="10dp"
+                    android:textSize="15sp"
+                    android:id="@+id/z_way_super"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    />
             </RelativeLayout>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Z-way Super"
-                android:textColor="#fff"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:textSize="15sp"
-                android:id="@+id/z_way_super"
 
-                />
 
 
         </LinearLayout>
@@ -191,17 +199,19 @@
                     android:background="@drawable/click_button"
 
                     />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Essex Hit"
+                    android:textColor="#fff"
+                    android:layout_marginTop="10dp"
+                    android:textSize="15sp"
+                    android:id="@+id/essex_hit"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    />
             </RelativeLayout>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Essex Hit"
-                android:textColor="#fff"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:textSize="15sp"
-                android:id="@+id/essex_hit"
-                />
+
 
 
         </LinearLayout>
@@ -217,7 +227,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
 
         >
         <LinearLayout
@@ -242,18 +252,19 @@
                     android:background="@drawable/click_button"
 
                     />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Essex Hot"
+                    android:textColor="#fff"
+                    android:layout_marginTop="10dp"
+                    android:textSize="15sp"
+                    android:id="@+id/essex_hot"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    />
             </RelativeLayout>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Essex Hot"
-                android:textColor="#fff"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:textSize="15sp"
-                android:id="@+id/essex_hot"
 
-                />
 
 
         </LinearLayout>
@@ -281,17 +292,19 @@
                     android:background="@drawable/click_button"
 
                     />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Essex Wave"
+                    android:textColor="#fff"
+                    android:layout_marginTop="10dp"
+                    android:textSize="15sp"
+                    android:id="@+id/essex_wave"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    />
+
             </RelativeLayout>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Essex Wave"
-                android:textColor="#fff"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:textSize="15sp"
-                android:id="@+id/essex_wave"
-                />
 
 
         </LinearLayout>
@@ -307,7 +320,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
 
         >
         <LinearLayout
@@ -332,18 +345,19 @@
                     android:background="@drawable/click_button"
 
                     />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Youth"
+                    android:textColor="#fff"
+                    android:layout_marginTop="10dp"
+                    android:textSize="15sp"
+                    android:id="@+id/youth"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    />
             </RelativeLayout>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Youth"
-                android:textColor="#fff"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:textSize="15sp"
-                android:id="@+id/youth"
 
-                />
 
 
         </LinearLayout>
@@ -371,17 +385,19 @@
                     android:background="@drawable/click_button"
 
                     />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Storm"
+                    android:textColor="#fff"
+                    android:layout_marginTop="10dp"
+                    android:textSize="15sp"
+                    android:id="@+id/storm"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    />
             </RelativeLayout>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Storm"
-                android:textColor="#fff"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:textSize="15sp"
-                android:id="@+id/storm"
-                />
+
 
 
         </LinearLayout>

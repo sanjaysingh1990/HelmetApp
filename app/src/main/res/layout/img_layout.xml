@@ -11,6 +11,9 @@
         android:layout_height="90dp"
         android:src="@drawable/three"
         android:id="@+id/img"
+        android:layout_marginRight="20dp"
+        android:scaleType="centerCrop"
+
         />
 
     <ProgressBar
