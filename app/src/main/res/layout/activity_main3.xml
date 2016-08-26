@@ -97,7 +97,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="center_horizontal"
-
+                                android:textColor="#000"
                                 android:text="Air Ventilation System"
                                 android:textSize="9sp" />
 
@@ -119,7 +119,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-
+                                android:textColor="#000"
                                 android:layout_gravity="center_horizontal"
                                 android:gravity="center"
                                 android:text=" Padding"
@@ -152,7 +152,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-
+                                android:textColor="#000"
                                 android:gravity="center_horizontal"
                                 android:text="Scratch Resistant"
                                 android:textSize="9sp" />
@@ -173,7 +173,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-
+                                android:textColor="#000"
                                 android:gravity="center_horizontal"
                                 android:text="Micromatic Buckle"
                                 android:textSize="9sp" />
@@ -199,16 +199,21 @@
 
                             <ImageView
                                 android:layout_width="60dp"
-                                android:layout_height="60dp"
+                                android:layout_height="45dp"
                                 android:layout_gravity="center_horizontal"
-                                android:src="@drawable/nine" />
+                                android:src="@drawable/nine_g"
+                                android:layout_marginTop="20dp"
+                                />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
+                                android:textColor="#000"
                                 android:text="800GM"
-                                android:textSize="9sp" />
+                                android:textSize="9sp"
+                                android:layout_marginTop="7dp"
+                                />
                         </LinearLayout>
 
                         <LinearLayout
@@ -219,9 +224,11 @@
 
                             <ImageView
                                 android:layout_width="60dp"
-                                android:layout_height="60dp"
+                                android:layout_height="85dp"
                                 android:layout_gravity="center_horizontal"
-                                android:src="@drawable/ten" />
+                                android:src="@drawable/ten_g"
+                                android:layout_marginTop="-5dp"
+                                />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -229,7 +236,10 @@
                                 android:layout_gravity="center"
                                 android:gravity="center_horizontal"
                                 android:text="CM/L-3291254"
-                                android:textSize="9sp" />
+                                android:textColor="#000"
+                                android:textSize="9sp"
+                                android:layout_marginTop="-8dp"
+                                />
 
                         </LinearLayout>
 
