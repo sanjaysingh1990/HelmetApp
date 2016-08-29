@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -14,8 +15,10 @@ import android.widget.TextView;
 public class FullFaceCategory extends AppCompatActivity {
 
 
-    RelativeLayout elex,leo,water;
+    LinearLayout elex,leo,water;
     TextView elexcategory,leocategory,watercategory,categoryname;
+    ImageView eleximg,leoimg,walterimg;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +31,10 @@ public class FullFaceCategory extends AppCompatActivity {
         leocategory=(TextView)findViewById(R.id.leocategory);
         watercategory=(TextView)findViewById(R.id.watercategory);
 
+        eleximg=(ImageView)findViewById(R.id.eleximg);
+        leoimg=(ImageView)findViewById(R.id.leoimg);
+        walterimg=(ImageView)findViewById(R.id.walterimg);
+
         categoryname=(TextView)findViewById(R.id.categoryname);
         Typeface custom1= Typeface.createFromAsset(getAssets(), "newfonts/GOTHICB_0.TTF");
         categoryname.setTypeface(custom1);
@@ -39,11 +46,16 @@ public class FullFaceCategory extends AppCompatActivity {
         watercategory.setTypeface(custom);
 
 
+        setHeightWidth(eleximg);
+        setHeightWidth(leoimg);
+        setHeightWidth(walterimg);
 
-        elex=(RelativeLayout)findViewById(R.id.elex);
-        leo=(RelativeLayout)findViewById(R.id.leo);
 
-        water=(RelativeLayout)findViewById(R.id.water);
+
+        elex=(LinearLayout)findViewById(R.id.elex);
+        leo=(LinearLayout)findViewById(R.id.leo);
+
+        water=(LinearLayout)findViewById(R.id.water);
 
 
         
@@ -106,4 +118,15 @@ public class FullFaceCategory extends AppCompatActivity {
         });
 
     }
+
+    public void setHeightWidth(ImageView img){
+        AppController app= (AppController) getApplication();
+        android.view.ViewGroup.LayoutParams layoutParams = img.getLayoutParams();
+        layoutParams.width = (app.width * 50) / 100;
+        layoutParams.height = (app.width * 50) / 100;
+        img.setLayoutParams(layoutParams);
+
+
+    }
+
 }

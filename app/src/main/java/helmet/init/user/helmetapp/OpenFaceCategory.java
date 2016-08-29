@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,8 +18,8 @@ import android.widget.Toast;
 public class OpenFaceCategory extends AppCompatActivity {
 
     TextView host,z_way,z_way_super,essex_hit,essex_hot,essex_wave,youth,storm,categoryname;
-    RelativeLayout host_layout,z_way_layout,z_way_super_layout,essex_hit_layout,essex_hot_layout,essex_wave_layout,youth_layout,storm_layout;
-
+    LinearLayout host_layout,z_way_layout,z_way_super_layout,essex_hit_layout,essex_hot_layout,essex_wave_layout,youth_layout,storm_layout;
+    ImageView hostimg,zwayimg,zwaysuperimg,essexhitimg,essexhotimg,essexwaveimg,youthimg,stormimg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,19 +37,40 @@ public class OpenFaceCategory extends AppCompatActivity {
         youth=(TextView)findViewById(R.id.youth);
         storm=(TextView)findViewById(R.id.storm);
 
-        host_layout=(RelativeLayout)findViewById(R.id.hostlayout);
-        z_way_layout=(RelativeLayout)findViewById(R.id.z_way_layout);
-        z_way_super_layout=(RelativeLayout)findViewById(R.id.z_way_super_layout);
-        essex_hit_layout=(RelativeLayout)findViewById(R.id.essex_hit_layout);
-        essex_hot_layout=(RelativeLayout)findViewById(R.id.essex_hot_layout);
-        essex_wave_layout=(RelativeLayout)findViewById(R.id.essex_wave_layout);
-        youth_layout=(RelativeLayout)findViewById(R.id.youth_layout);
-        storm_layout=(RelativeLayout)findViewById(R.id.storm_layout);
+        host_layout=(LinearLayout)findViewById(R.id.hostlayout);
+        z_way_layout=(LinearLayout)findViewById(R.id.z_way_layout);
+        z_way_super_layout=(LinearLayout)findViewById(R.id.z_way_super_layout);
+        essex_hit_layout=(LinearLayout)findViewById(R.id.essex_hit_layout);
+        essex_hot_layout=(LinearLayout)findViewById(R.id.essex_hot_layout);
+        essex_wave_layout=(LinearLayout)findViewById(R.id.essex_wave_layout);
+        youth_layout=(LinearLayout)findViewById(R.id.youth_layout);
+        storm_layout=(LinearLayout)findViewById(R.id.storm_layout);
+
+        hostimg=(ImageView)findViewById(R.id.hostimg);
+        zwayimg=(ImageView)findViewById(R.id.zwayimg);
+        zwaysuperimg=(ImageView)findViewById(R.id.zwaysuperimg);
+        essexhitimg=(ImageView)findViewById(R.id.essexhitimg);
+        essexhotimg=(ImageView)findViewById(R.id.essexhotimg);
+        essexwaveimg=(ImageView)findViewById(R.id.essexwaveimg);
+        stormimg=(ImageView)findViewById(R.id.stormimg);
+        youthimg=(ImageView)findViewById(R.id.youthimg);
+
+
+
+        setHeightWidth(hostimg);
+        setHeightWidth(zwayimg);
+        setHeightWidth(zwaysuperimg);
+        setHeightWidth(essexhitimg);
+        setHeightWidth(essexhotimg);
+        setHeightWidth(essexwaveimg);
+        setHeightWidth(youthimg);
+        setHeightWidth(stormimg);
+
+
 
         categoryname=(TextView)findViewById(R.id.categoryname);
         Typeface custom1= Typeface.createFromAsset(getAssets(), "newfonts/GOTHICB_0.TTF");
         categoryname.setTypeface(custom1);
-
 
 
         Typeface custom= Typeface.createFromAsset(getAssets(), "newfonts/GOTHIC_0.TTF");
@@ -355,4 +378,14 @@ public class OpenFaceCategory extends AppCompatActivity {
 
 
     }
+    public void setHeightWidth(ImageView img){
+        AppController app= (AppController) getApplication();
+        android.view.ViewGroup.LayoutParams layoutParams = img.getLayoutParams();
+        layoutParams.width = (app.width * 50) / 100;
+        layoutParams.height = (app.width * 50) / 100;
+        img.setLayoutParams(layoutParams);
+
+
+    }
+
 }

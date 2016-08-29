@@ -1,13 +1,18 @@
 package helmet.init.user.helmetapp;
 
 import android.app.Application;
+import android.content.Context;
 import android.graphics.Bitmap;
+import android.util.DisplayMetrics;
+import android.view.Display;
+import android.view.WindowManager;
 
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
 public class ToDoListApplication extends Application {
+
 
 public static DisplayImageOptions options;
 public static ImageLoader imageLoader;
@@ -31,6 +36,7 @@ public static ImageLoader imageLoader;
 
 		imageLoader= ImageLoader.getInstance();
 		this.imageLoader.init(ImageLoaderConfiguration.createDefault(this));
+
 	}
 
 }

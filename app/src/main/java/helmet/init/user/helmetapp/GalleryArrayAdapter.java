@@ -196,7 +196,8 @@ public class GalleryArrayAdapter extends RecyclerView.Adapter<GalleryArrayAdapte
                     // what to do with it.
                   //  share.putExtra(Intent.EXTRA_SUBJECT, "Helmet image share");
 
-                    share.putExtra(Intent.EXTRA_TEXT, mItems.get(pos).getHelmet_image());
+                   // share.putExtra(Intent.EXTRA_TEXT,"Please download it from here: "+ mItems.get(pos).getHelmet_image());
+                    share.putExtra(Intent.EXTRA_TEXT,"Please download it from here: https://play.google.com/store/apps/details?id=com.init.sikhdiary&hl=en");
 
                     con.startActivity(Intent.createChooser(share, "Share link!"));
 

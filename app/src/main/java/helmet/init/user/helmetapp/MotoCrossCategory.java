@@ -7,14 +7,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class MotoCrossCategory extends AppCompatActivity {
 
 
-    RelativeLayout dream;
+    LinearLayout dream;
     TextView dreamcategory,categoryname;
+    ImageView dash;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +35,10 @@ public class MotoCrossCategory extends AppCompatActivity {
         Typeface custom= Typeface.createFromAsset(getAssets(), "fonts/gillsanssemibold.ttf");
         dreamcategory.setTypeface(custom);
 
-        dream=(RelativeLayout)findViewById(R.id.dream);
+        dream=(LinearLayout)findViewById(R.id.dream);
+        dash=(ImageView)findViewById(R.id.dash);
+
+        setHeightWidth(dash);
 
         dream.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,4 +54,14 @@ public class MotoCrossCategory extends AppCompatActivity {
             }
         });
     }
+    public void setHeightWidth(ImageView img){
+        AppController app= (AppController) getApplication();
+        android.view.ViewGroup.LayoutParams layoutParams = img.getLayoutParams();
+        layoutParams.width = (app.width * 50) / 100;
+        layoutParams.height = (app.width * 50) / 100;
+        img.setLayoutParams(layoutParams);
+
+
+    }
+
 }

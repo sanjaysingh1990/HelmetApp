@@ -106,7 +106,7 @@ public class Splash extends AppCompatActivity {
 
 
                 try {
-                    Thread.sleep(3000);
+                    Thread.sleep(6000);
                     Intent activity = new Intent(Splash.this, CategoryActivity.class);
                     startActivity(activity);
                     finish();

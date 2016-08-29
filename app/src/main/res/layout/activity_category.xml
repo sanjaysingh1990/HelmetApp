@@ -12,7 +12,7 @@
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:visibility="gone"
     >
     <ImageView
         android:layout_width="wrap_content"
@@ -34,6 +34,19 @@
 
 
     >
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/sai_logo"
+            android:layout_gravity="left"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="1dp"
+            android:visibility="gone"
+            />
+
     <ImageView
         android:layout_width="200dp"
         android:layout_height="50dp"
@@ -42,7 +55,7 @@
         android:layout_marginTop="20dp"
         android:background="@android:color/transparent"
         />
-
+    </FrameLayout>
     <!--<ImageView
         android:layout_width="200dp"
         android:layout_height="80dp"
@@ -66,11 +79,12 @@
            android:layout_marginLeft="10dp"
 
            >
-        <RelativeLayout
-            android:layout_width="160dp"
-            android:layout_height="160dp"
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/flipuplayout"
             android:gravity="center"
+            android:orientation="vertical"
 
             >
 
@@ -78,10 +92,11 @@
 
             <ImageView
                 android:id="@+id/flip"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/flip_outer"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/helmet1"
                 android:background="@drawable/click_button"
+                android:scaleType="centerCrop"
 
                 />
             <TextView
@@ -90,14 +105,14 @@
                 android:text="Flip Up"
                 android:textColor="#fff"
 
-                android:layout_marginTop="10dp"
+
                 android:textSize="15sp"
                 android:id="@+id/flip_up"
                 android:layout_alignParentBottom="true"
                 android:layout_centerInParent="true"
                 />
 
-        </RelativeLayout>
+        </LinearLayout>
 
 
        </LinearLayout>
@@ -110,19 +125,23 @@
             android:layout_alignParentRight="true"
             android:layout_marginRight="10dp"
             >
-            <RelativeLayout
-                android:layout_width="160dp"
-                android:layout_height="160dp"
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/full_face_layout"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical"
+                >
 
 
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/full_outer"
+                    android:id="@+id/full"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/helmet2"
                     android:background="@drawable/click_button"
+                    android:scaleType="centerCrop"
 
                     />
                 <TextView
@@ -130,14 +149,13 @@
                     android:layout_height="wrap_content"
                     android:text="Full Face"
                     android:textColor="#fff"
-                    android:layout_marginTop="10dp"
                     android:textSize="15sp"
                     android:id="@+id/full_face"
                     android:layout_alignParentBottom="true"
                     android:layout_centerInParent="true"
                     />
 
-            </RelativeLayout>
+            </LinearLayout>
 
 
         </LinearLayout>
@@ -160,20 +178,23 @@
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="10dp"
             >
-            <RelativeLayout
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/open_face_layout"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical"
+                >
 
 
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/open_outer"
+                    android:id="@+id/open"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/helmet3"
                     android:background="@drawable/click_button"
-
+                    android:scaleType="centerCrop"
                     />
 
                 <TextView
@@ -181,13 +202,13 @@
                     android:layout_height="wrap_content"
                     android:text="Open Face"
                     android:textColor="#fff"
-                    android:layout_marginTop="10dp"
+
                     android:textSize="15sp"
                     android:id="@+id/open_face"
                     android:layout_alignParentBottom="true"
                     android:layout_centerInParent="true"
                     />
-            </RelativeLayout>
+            </LinearLayout>
 
 
 
@@ -201,34 +222,37 @@
             android:layout_alignParentRight="true"
             android:layout_marginRight="10dp"
             >
-            <RelativeLayout
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/moto_cross_layout"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical"
+                >
 
 
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/moto_outer"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/helmet4"
                     android:background="@drawable/click_button"
-
+                    android:id="@+id/moto"
+                    android:scaleType="centerCrop"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Moto Cross"
                     android:textColor="#fff"
-                    android:layout_marginTop="10dp"
+
                     android:textSize="15sp"
                     android:id="@+id/moto_cross"
                     android:layout_alignParentBottom="true"
                     android:layout_centerInParent="true"
                     />
 
-            </RelativeLayout>
+            </LinearLayout>
 
 
         </LinearLayout>

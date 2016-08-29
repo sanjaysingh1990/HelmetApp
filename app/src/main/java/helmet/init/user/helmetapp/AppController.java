@@ -2,8 +2,12 @@ package helmet.init.user.helmetapp;
 
 
 import android.app.Application;
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.text.TextUtils;
+import android.util.DisplayMetrics;
+import android.view.Display;
+import android.view.WindowManager;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -26,6 +30,7 @@ public class AppController extends Application {
 
 	private static AppController mInstance;
 	public static DisplayImageOptions options;
+	public	int width,height;
 	@Override
 	public void onCreate() {
 		super.onCreate();
@@ -45,6 +50,14 @@ public class AppController extends Application {
 		imageLoader= com.nostra13.universalimageloader.core.ImageLoader.getInstance();
 		this.imageLoader.init(ImageLoaderConfiguration.createDefault(this));
 
+
+		WindowManager wm = (WindowManager)getSystemService(Context.WINDOW_SERVICE);
+		Display display = wm.getDefaultDisplay();
+		DisplayMetrics metrics = new DisplayMetrics();
+		display.getMetrics(metrics);
+		width = metrics.widthPixels;
+		height = metrics.heightPixels;
+
 	}
 
 	public static synchronized AppController getInstance() {
@@ -58,6 +71,9 @@ public class AppController extends Application {
 
 		return mRequestQueue;
 	}
+
+
+
 
 	/*public ImageLoader getImageLoader() {
 		getRequestQueue();

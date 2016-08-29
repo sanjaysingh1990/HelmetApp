@@ -62,7 +62,7 @@ public class TwoFragment extends Fragment {
         gridView.setHasFixedSize(true);
         mLayoutManager = new GridLayoutManager(getActivity(), 2);
         gridView.setLayoutManager(mLayoutManager);
-        adapter=new GalleryArrayAdapter(getActivity(), data);
+        adapter=new GalleryArrayAdapter(getActivity().getApplicationContext(), data);
         gridView.setAdapter(adapter);
 
 

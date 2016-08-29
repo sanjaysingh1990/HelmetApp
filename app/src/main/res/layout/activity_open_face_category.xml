@@ -48,23 +48,26 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_alignParentLeft="true"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="10dp"
 
             >
-            <RelativeLayout
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/hostlayout"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical"
+                >
 
 
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/flip_outer"
+                    android:id="@+id/hostimg"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/helmet1"
                     android:background="@drawable/click_button"
-
+                    android:scaleType="centerCrop"
 
                     />
                 <TextView
@@ -72,14 +75,14 @@
                     android:layout_height="wrap_content"
                     android:text="Host"
                     android:textColor="#fff"
-                    android:layout_marginTop="10dp"
+
                     android:textSize="15sp"
                     android:id="@+id/host"
                     android:layout_alignParentBottom="true"
                     android:layout_centerInParent="true"
 
                     />
-            </RelativeLayout>
+            </LinearLayout>
 
 
 
@@ -91,22 +94,25 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="30dp"
+            android:layout_marginRight="10dp"
             >
-            <RelativeLayout
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/z_way_layout"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical"
+                >
 
 
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/full_outer"
+                    android:id="@+id/zwayimg"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/helmet2"
                     android:background="@drawable/click_button"
-
+                    android:scaleType="centerCrop"
                     />
 
                 <TextView
@@ -121,7 +127,7 @@
                     android:layout_centerInParent="true"
                     />
 
-            </RelativeLayout>
+            </LinearLayout>
 
 
         </LinearLayout>
@@ -142,20 +148,23 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_alignParentLeft="true"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="10dp"
             >
-            <RelativeLayout
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/z_way_super_layout"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical"
+                >
 
 
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/flip_outer"
+                    android:id="@+id/zwaysuperimg"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/helmet1"
                     android:background="@drawable/click_button"
 
                     />
@@ -164,13 +173,13 @@
                     android:layout_height="wrap_content"
                     android:text="Z-way Super"
                     android:textColor="#fff"
-                    android:layout_marginTop="10dp"
+
                     android:textSize="15sp"
                     android:id="@+id/z_way_super"
                     android:layout_alignParentBottom="true"
                     android:layout_centerInParent="true"
                     />
-            </RelativeLayout>
+            </LinearLayout>
 
 
 
@@ -182,20 +191,23 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="30dp"
+            android:layout_marginRight="10dp"
             >
-            <RelativeLayout
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/essex_hit_layout"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical"
+                >
 
 
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/full_outer"
+                    android:id="@+id/essexhitimg"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/helmet2"
                     android:background="@drawable/click_button"
 
                     />
@@ -204,13 +216,12 @@
                     android:layout_height="wrap_content"
                     android:text="Essex Hit"
                     android:textColor="#fff"
-                    android:layout_marginTop="10dp"
                     android:textSize="15sp"
                     android:id="@+id/essex_hit"
                     android:layout_alignParentBottom="true"
                     android:layout_centerInParent="true"
                     />
-            </RelativeLayout>
+            </LinearLayout>
 
 
 
@@ -235,20 +246,23 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_alignParentLeft="true"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="10dp"
             >
-            <RelativeLayout
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/essex_hot_layout"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical"
+                >
 
 
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/flip_outer"
+                    android:id="@+id/essexhotimg"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/helmet1"
                     android:background="@drawable/click_button"
 
                     />
@@ -257,13 +271,13 @@
                     android:layout_height="wrap_content"
                     android:text="Essex Hot"
                     android:textColor="#fff"
-                    android:layout_marginTop="10dp"
+
                     android:textSize="15sp"
                     android:id="@+id/essex_hot"
                     android:layout_alignParentBottom="true"
                     android:layout_centerInParent="true"
                     />
-            </RelativeLayout>
+            </LinearLayout>
 
 
 
@@ -275,20 +289,23 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="30dp"
+            android:layout_marginRight="10dp"
             >
-            <RelativeLayout
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/essex_wave_layout"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical"
+                >
 
 
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/full_outer"
+                    android:id="@+id/essexwaveimg"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/helmet2"
                     android:background="@drawable/click_button"
 
                     />
@@ -304,7 +321,7 @@
                     android:layout_centerInParent="true"
                     />
 
-            </RelativeLayout>
+            </LinearLayout>
 
 
         </LinearLayout>
@@ -328,21 +345,25 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_alignParentLeft="true"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="10dp"
             >
-            <RelativeLayout
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/youth_layout"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical"
+                >
 
 
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/flip_outer"
+                    android:id="@+id/youthimg"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/helmet1"
                     android:background="@drawable/click_button"
+                    android:scaleType="centerCrop"
 
                     />
                 <TextView
@@ -350,13 +371,13 @@
                     android:layout_height="wrap_content"
                     android:text="Youth"
                     android:textColor="#fff"
-                    android:layout_marginTop="10dp"
+
                     android:textSize="15sp"
                     android:id="@+id/youth"
                     android:layout_alignParentBottom="true"
                     android:layout_centerInParent="true"
                     />
-            </RelativeLayout>
+            </LinearLayout>
 
 
 
@@ -368,20 +389,24 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="30dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
             >
-            <RelativeLayout
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/storm_layout"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical"
+                >
 
 
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/full_outer"
+                    android:id="@+id/stormimg"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/helmet2"
                     android:background="@drawable/click_button"
 
                     />
@@ -390,13 +415,12 @@
                     android:layout_height="wrap_content"
                     android:text="Storm"
                     android:textColor="#fff"
-                    android:layout_marginTop="10dp"
                     android:textSize="15sp"
                     android:id="@+id/storm"
                     android:layout_alignParentBottom="true"
                     android:layout_centerInParent="true"
                     />
-            </RelativeLayout>
+            </LinearLayout>
 
 
 

@@ -14,14 +14,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class CategoryActivity extends AppCompatActivity {
 
     TextView flip_up,full_face,open_face,moto_cross;
-    RelativeLayout flip_uplayout,full_face_layout,open_face_layout,moto_cross_layout;
-    ImageView flip;
+    LinearLayout full_face_layout,open_face_layout,moto_cross_layout;
+    LinearLayout flip_uplayout;
+    ImageView flip,moto,full,open;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,12 +37,15 @@ public class CategoryActivity extends AppCompatActivity {
         open_face=(TextView)findViewById(R.id.open_face);
         moto_cross=(TextView)findViewById(R.id.moto_cross);
 
-        flip_uplayout=(RelativeLayout)findViewById(R.id.flipuplayout);
-        full_face_layout=(RelativeLayout)findViewById(R.id.full_face_layout);
-        open_face_layout=(RelativeLayout)findViewById(R.id.open_face_layout);
-        moto_cross_layout=(RelativeLayout)findViewById(R.id.moto_cross_layout);
+        flip_uplayout=(LinearLayout)findViewById(R.id.flipuplayout);
+        full_face_layout=(LinearLayout)findViewById(R.id.full_face_layout);
+        open_face_layout=(LinearLayout)findViewById(R.id.open_face_layout);
+        moto_cross_layout=(LinearLayout)findViewById(R.id.moto_cross_layout);
 
-      //  flip=(ImageView)findViewById(R.id.flip);
+        full=(ImageView)findViewById(R.id.full);
+        open=(ImageView)findViewById(R.id.open);
+        moto=(ImageView)findViewById(R.id.moto);
+        flip=(ImageView)findViewById(R.id.flip);
        // flip.setImageBitmap(highlightImage(BitmapFactory.decodeResource(getResources(), R.drawable.flip_up_category)));
 
 
@@ -52,6 +57,10 @@ public class CategoryActivity extends AppCompatActivity {
 
        // changeBackground();
 
+        setHeightWidth(flip);
+        setHeightWidth(moto);
+        setHeightWidth(open);
+        setHeightWidth(full);
 
 
 
@@ -145,6 +154,16 @@ public class CategoryActivity extends AppCompatActivity {
 
 
 }
+
+    public void setHeightWidth(ImageView img){
+        AppController app= (AppController) getApplication();
+        android.view.ViewGroup.LayoutParams layoutParams = img.getLayoutParams();
+        layoutParams.width = (app.width * 50) / 100;
+        layoutParams.height = (app.width * 50) / 100;
+        img.setLayoutParams(layoutParams);
+
+
+    }
 
     public Bitmap highlightImage(Bitmap src) {
         // create new bitmap, which will be painted and becomes result image

@@ -7,14 +7,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class FlipCategory extends AppCompatActivity {
 
 
-    RelativeLayout dream;
+    LinearLayout dream;
     TextView dreamcategory,categoryname;
+    ImageView dreamimg;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,10 +27,13 @@ public class FlipCategory extends AppCompatActivity {
         setContentView(R.layout.activity_flip_category);
 
         dreamcategory=(TextView)findViewById(R.id.dreamcategory);
+        dreamimg=(ImageView)findViewById(R.id.dreamimg);
+        dream=(LinearLayout)findViewById(R.id.dream);
 
 
+        setHeightWidth(dreamimg);
 
-       // changeBackgound();
+        // changeBackgound();
         Typeface custom= Typeface.createFromAsset(getAssets(), "fonts/gillsanssemibold.ttf");
         dreamcategory.setTypeface(custom);
 
@@ -35,7 +41,7 @@ public class FlipCategory extends AppCompatActivity {
 
 
 
-        dreamcategory.setOnClickListener(new View.OnClickListener() {
+        dream.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -50,5 +56,14 @@ public class FlipCategory extends AppCompatActivity {
 
     }
 
+    public void setHeightWidth(ImageView img){
+        AppController app= (AppController) getApplication();
+        android.view.ViewGroup.LayoutParams layoutParams = img.getLayoutParams();
+        layoutParams.width = (app.width * 50) / 100;
+        layoutParams.height = (app.width * 50) / 100;
+        img.setLayoutParams(layoutParams);
+
+
+    }
 
 }

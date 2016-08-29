@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".CategoryActivity"
     android:background="@drawable/description_back"
     android:orientation="vertical"
@@ -45,23 +43,27 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_alignParentLeft="true"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="10dp"
 
             >
-            <RelativeLayout
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
 
                 android:id="@+id/elex"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical"
+                >
 
 
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/elex_outer"
+                    android:id="@+id/eleximg"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/helmet5"
                     android:background="@drawable/click_button"
+                    android:scaleType="centerCrop"
 
                     />
                 <TextView
@@ -69,13 +71,13 @@
                     android:layout_height="wrap_content"
                     android:text="Elex"
                     android:textColor="#fff"
-                    android:layout_marginTop="2dp"
-                    android:textSize="18sp"
+
+                    android:textSize="15sp"
                     android:id="@+id/elexcategory"
                     android:layout_alignParentBottom="true"
                     android:layout_centerInParent="true"
                     />
-            </RelativeLayout>
+            </LinearLayout>
 
 
 
@@ -87,21 +89,25 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="30dp"
+            android:layout_marginRight="10dp"
             >
-            <RelativeLayout
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/leo"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical"
+                >
 
 
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/leo_outer"
+                    android:id="@+id/leoimg"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/helmet6"
                     android:background="@drawable/click_button"
+                    android:scaleType="centerCrop"
 
                     />
                 <TextView
@@ -109,13 +115,13 @@
                     android:layout_height="wrap_content"
                     android:text="Leo"
                     android:textColor="#fff"
-                    android:layout_marginTop="2dp"
-                    android:textSize="18sp"
+
+                    android:textSize="15sp"
                     android:id="@+id/leocategory"
                     android:layout_alignParentBottom="true"
                     android:layout_centerInParent="true"
                     />
-            </RelativeLayout>
+            </LinearLayout>
 
 
 
@@ -138,34 +144,40 @@
             android:orientation="vertical"
             android:layout_centerInParent="true"
             android:layout_marginLeft="30dp"
+
+
             >
-            <RelativeLayout
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/water"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical"
+
+                >
 
 
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/walter_outer"
+                    android:id="@+id/walterimg"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/helmet7"
                     android:background="@drawable/click_button"
-
+                    android:scaleType="centerCrop"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Walter"
                     android:textColor="#fff"
-                    android:layout_marginTop="2dp"
-                    android:textSize="18sp"
+
+                    android:textSize="15sp"
                     android:id="@+id/watercategory"
                     android:layout_alignParentBottom="true"
                     android:layout_centerInParent="true"
                     />
-            </RelativeLayout>
+            </LinearLayout>
 
 
 
