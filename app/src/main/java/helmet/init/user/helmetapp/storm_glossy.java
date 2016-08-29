@@ -59,7 +59,7 @@ public class storm_glossy extends Fragment {
         gridView.setHasFixedSize(true);
         mLayoutManager = new GridLayoutManager(getActivity(), 2);
         gridView.setLayoutManager(mLayoutManager);
-        adapter=new GalleryArrayAdapter(getActivity().getApplicationContext(), data);
+        adapter=new GalleryArrayAdapter(this.getActivity(), data);
         gridView.setAdapter(adapter);
 
 

@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -31,7 +32,7 @@ public class Splash extends AppCompatActivity {
      AppAdapter AppAdapter;
     ArrayList<Integer> im = new ArrayList<>();
     AutoScrollViewPager mViewFlipper;
-
+    Button next;
     int[] layouts = new int[]{
             R.layout.splash1,
             R.layout.splash2,
@@ -49,6 +50,18 @@ public class Splash extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.activity_splash);
+        next=(Button)findViewById(R.id.next);
+
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent activity = new Intent(Splash.this, CategoryActivity.class);
+                startActivity(activity);
+                finish();
+
+            }
+        });
+
      /*   viewPager = (ViewPager) findViewById(R.id.view_pager);
         myViewPagerAdapter = new MyViewPagerAdapter();
         viewPager.setAdapter(myViewPagerAdapter);
@@ -100,7 +113,7 @@ public class Splash extends AppCompatActivity {
             }
         });
 */
-        Thread th = new Thread(new Runnable() {
+      /*  Thread th = new Thread(new Runnable() {
             @Override
             public void run() {
 
@@ -117,6 +130,7 @@ public class Splash extends AppCompatActivity {
             }
         });
         th.start();
+        */
         }
 
     private void addDots(LinearLayout view, int NUM_PAGES, Context context) {

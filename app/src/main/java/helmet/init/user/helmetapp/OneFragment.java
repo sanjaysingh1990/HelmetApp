@@ -37,7 +37,7 @@ public class OneFragment extends Fragment {
     GalleryArrayAdapter adapter;
     ProgressBar prog;
     static int pos;
-
+   Context con;
     boolean flag=true;
     RecyclerView.LayoutManager 	mLayoutManager;
 
@@ -56,6 +56,8 @@ public class OneFragment extends Fragment {
         // Inflate the layout for this fragment
         View v= inflater.inflate(R.layout.fragment_one, container, false);
 
+         con=getActivity().getApplicationContext();
+
         prog=(ProgressBar)v.findViewById(R.id.progress_bar);
         prog.setVisibility(View.VISIBLE);
 
@@ -63,7 +65,7 @@ public class OneFragment extends Fragment {
         gridView.setHasFixedSize(true);
         mLayoutManager = new GridLayoutManager(getActivity(), 2);
         gridView.setLayoutManager(mLayoutManager);
-        adapter=new GalleryArrayAdapter(getActivity().getApplicationContext(), data);
+        adapter=new GalleryArrayAdapter(this.getActivity(), data);
         gridView.setAdapter(adapter);
 
 
