@@ -204,13 +204,15 @@ public class CameraPreviewFragment extends Fragment
     /**
      * Create a File for saving an image or video
      */
-    private static File getOutputMediaFile(Context mContext, boolean mode) {
+    private File getOutputMediaFile(Context mContext, boolean mode) {
         // To be safe, you should check that the SDCard is mounted
         // using Environment.getExternalStorageState() before doing this.
-        File mediaStorageDir = new File(
-                Environment.getExternalStoragePublicDirectory(
-                        Environment.DIRECTORY_PICTURES), Folder.FOLDER_NAME);
-
+        File mediaStorageDir = new File(getTempDirectoryPath());
+        if (mediaStorageDir.listFiles().length > 0) {
+            for (File tempFile : mediaStorageDir.listFiles()) {
+                tempFile.delete();
+            }
+        }
         // This location works best if you want the created images to be shared
         // between applications and persist after your app has been uninstalled.
 
@@ -253,7 +255,8 @@ public class CameraPreviewFragment extends Fragment
         return mediaFile;
     }
 
-    public static boolean prepareVideoRecorder(Context mContext, int mode) {
+
+    public boolean prepareVideoRecorder(Context mContext, int mode) {
         // Should release before use new Preview for Recording Video mode
         CustomCamera.releaseCamera();
 
@@ -567,6 +570,10 @@ public class CameraPreviewFragment extends Fragment
             singleFingerView.change(R.mipmap.helmet_back);
         } else if (view.getId() == R.id.share) {
             viewToBitmap();
+        } else if (view.getId() == R.id.saveimage) {
+
+            saveImageToExternal();
+
         }
 
     }
@@ -597,7 +604,43 @@ public class CameraPreviewFragment extends Fragment
             Log.e("error", e.getMessage());
         } finally {
             setframe.destroyDrawingCache();
+
+        }
+        singleFingerView.show();
+
+
+    }
+
+    public void saveImageToExternal() {
+
+        if (!Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
+
+            Toast.makeText(getActivity(), "sd card not available", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        singleFingerView.hide();
+        setframe.setDrawingCacheEnabled(true);
+        setframe.buildDrawingCache();
+        Bitmap cache = setframe.getDrawingCache();
+        try {
+            File directory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES + "/Replay");
+            directory.mkdirs();
+            final File capturedImageFile = new File(directory.getAbsolutePath(), "replay" + System.currentTimeMillis() + ".jpg");
+            cache.compress(Bitmap.CompressFormat.JPEG, 100, new FileOutputStream(capturedImageFile));
+            String path = capturedImageFile.getAbsolutePath().toString();
+
             Toast.makeText(getActivity(), "image saved", Toast.LENGTH_LONG).show();
+            MediaScannerConnection.scanFile(getContext(), new String[]{path}, null, new MediaScannerConnection.OnScanCompletedListener() {
+                public void onScanCompleted(String path, Uri uri) {
+
+                }
+            });
+        } catch (Exception e) {
+            Log.e("error", e.getMessage());
+        } finally {
+            setframe.destroyDrawingCache();
+
         }
         singleFingerView.show();
 
@@ -665,28 +708,26 @@ public class CameraPreviewFragment extends Fragment
             // Hide switch camera button
             mIbtnSwitchFrontOrBackCamera.setVisibility(View.INVISIBLE);
         //to check flash availabe or not
-try {
-    Camera.Parameters parameters = CustomCamera.mCamera.getParameters();
-    List<String> flashModes = parameters.getSupportedFlashModes();
+        try {
+            Camera.Parameters parameters = CustomCamera.mCamera.getParameters();
+            List<String> flashModes = parameters.getSupportedFlashModes();
 //        Toast.makeText(getActivity(),flashModes.size()+"",Toast.LENGTH_SHORT).show();
-    if (flashModes != null) {
-        // parameters.setFlashMode(mFlashMode);
-        parameters.setFlashMode(Camera.Parameters.FLASH_MODE_ON);
-        camera_flash.setVisibility(View.VISIBLE);
-    } else {
-        camera_flash.setVisibility(View.INVISIBLE);
-    }
+            if (flashModes != null) {
+                // parameters.setFlashMode(mFlashMode);
+                parameters.setFlashMode(Camera.Parameters.FLASH_MODE_ON);
+                camera_flash.setVisibility(View.VISIBLE);
+            } else {
+                camera_flash.setVisibility(View.INVISIBLE);
+            }
 
    /* if (parameters.getSupportedFocusModes().contains(CameraActivity.parameters.FOCUS_MODE_CONTINUOUS_PICTURE)) {
         parameters.setFocusMode(CameraActivity.Parameters.FOCUS_MODE_CONTINUOUS_PICTURE);
     }*/
-    // Lock in the changes
-    CustomCamera.mCamera.setParameters(parameters);
-}
-catch(Exception ex)
-{
+            // Lock in the changes
+            CustomCamera.mCamera.setParameters(parameters);
+        } catch (Exception ex) {
 
-}
+        }
 
         return v;
     }
@@ -713,7 +754,7 @@ catch(Exception ex)
         mIbtnTakePhotoOrRecordVideo.setOnClickListener(this);
     }
 
-    ImageView share;
+    ImageView share, saveimg;
 
     private void initialViews(View v) {
         singleFingerView = (SingleFingerView) v.findViewById(R.id.tiv);
@@ -721,6 +762,7 @@ catch(Exception ex)
         helside = (ImageView) v.findViewById(R.id.helside);
         helback = (ImageView) v.findViewById(R.id.helback);
         share = (ImageView) v.findViewById(R.id.share);
+        saveimg = (ImageView) v.findViewById(R.id.saveimage);
 
         mFlCameraPreview = (FrameLayout) v.findViewById(R.id.fl_camera_preview);
         setframe = (FrameLayout) v.findViewById(R.id.setframe);
@@ -750,6 +792,7 @@ catch(Exception ex)
         helside.setOnClickListener(this);
         helback.setOnClickListener(this);
         share.setOnClickListener(this);
+        saveimg.setOnClickListener(this);
 
 
         //getting height

@@ -6,7 +6,6 @@ import android.hardware.Camera;
 import android.media.MediaRecorder;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.OrientationEventListener;
 import android.view.View;
@@ -90,7 +89,7 @@ public static Activity act;
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        setContentView(R.layout.activity_lnd_custom_camera);
+        setContentView(R.layout.activity_replay_custom_camera);
 act=this;
         /**
          * Get action string from intent to check it is :

@@ -256,7 +256,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:src="@drawable/save_image" />
+                    android:src="@drawable/save_image"
+                    android:id="@+id/saveimage"
+                    android:clickable="true"
+                    />
 
                 <ImageView
                     android:layout_width="wrap_content"
