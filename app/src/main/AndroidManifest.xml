@@ -100,7 +100,7 @@
      App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
         -->
 
-        <activity android:name=".MapDemo"></activity>
+        <activity android:name=".MapDemo" />
 
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
@@ -109,10 +109,19 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity android:name=".SmartTabActivity"></activity>
+        <activity android:name=".SmartTabActivity" />
+
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="b0ac7ea1dfea7bf5490049b7fb8935df519695f6" />
+
+        <activity android:name="helmet.location.GetCurrentLocation"
+            android:theme="@style/AppTheme.NoActionBar"
+            >
+
+
+
+        </activity>
     </application>
 
 </manifest>

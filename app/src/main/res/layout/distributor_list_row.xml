@@ -64,6 +64,7 @@
         android:paddingLeft="5dp"
         android:layout_gravity="center"
         android:id="@+id/distance"
+
         />
 
     <TextView

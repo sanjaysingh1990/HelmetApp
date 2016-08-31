@@ -3,6 +3,7 @@ package helmet.init.user.helmetapp;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Typeface;
+import android.location.Location;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -35,6 +36,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import helmet.location.GPSTracker;
+import helmet.location.GetCurrentLocation;
+
+
 public class DescriptionActivity extends AppCompatActivity {
 
     TextView locate, tryit, helmetname, name1, availablecolors, features, desc1, desc2;
@@ -43,6 +48,8 @@ public class DescriptionActivity extends AppCompatActivity {
     RecyclerView imagesRecycler;
     ImageAdapter imgAdapter;
 
+    // GPSTracker class
+    GPSTracker gps;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -125,8 +132,36 @@ else
         locate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent locate = new Intent(DescriptionActivity.this, LocateActivity.class);
-                startActivity(locate);
+                gps = new GPSTracker(DescriptionActivity.this);
+
+                // check if GPS enabled
+                if(gps.canGetLocation()){
+Location location=gps.getLocation();
+
+                    float speed=location.getSpeed();
+                    Log.e("speed",speed+"");
+                    double latitude = gps.getLatitude();
+                    double longitude = gps.getLongitude();
+
+                    // \n is for new line
+                   // Toast.makeText(getApplicationContext(), "Your Location is - \nLat: " + latitude + "\nLong: " + longitude, Toast.LENGTH_LONG).show();
+
+                    Intent locate = new Intent(DescriptionActivity.this, GetCurrentLocation.class);
+                    locate.putExtra("latitude",latitude);
+                    locate.putExtra("longitude",longitude);
+
+
+                    startActivity(locate);
+                }else{
+                    // can't get location
+                    // GPS or Network is not enabled
+                    // Ask user to enable GPS/network in settings
+                    gps.showSettingsAlert();
+                    //Toast.makeText(getApplicationContext(),"No location found",Toast.LENGTH_LONG).show();
+                }
+
+
+
             }
         });
         tryit.setOnClickListener(new View.OnClickListener() {
@@ -144,6 +179,7 @@ else
 
 
     }
+
 
 
 
